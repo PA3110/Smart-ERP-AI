@@ -1,4 +1,4 @@
-# Vivek ERP System — ERP + CRM + Flash-Sale Reservation Engine
+# ERP System — ERP + CRM + Flash-Sale Reservation Engine
 
 A full-stack operations portal for a wholesale/distribution business, covering
 authentication with roles, customer CRM, product/inventory management, and a
