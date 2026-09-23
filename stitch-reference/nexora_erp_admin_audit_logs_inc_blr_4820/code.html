@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Dashboard</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full space-y-space-md">
+<!-- Top Context & Ledger Breadcrumb Banner -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="hover:text-secondary cursor-pointer">Admin</span>
+<span>/</span>
+<span class="hover:text-secondary cursor-pointer">Security &amp; Audit</span>
+<span>/</span>
+<span class="text-secondary font-semibold">INC-BLR-4820</span>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-0.5">
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+          Audit &amp; Consensus Ledger
+        </h1>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px] text-secondary">shield_person</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Admin</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-0.5">
+<div class="flex items-center gap-1.5 bg-tertiary-container text-on-tertiary-container px-2 py-0.5 rounded shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Quorum Synchronized</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Raft Cluster V4 • TLS 1.3</span>
+</div>
+</div>
+<!-- Incident Master Ledger Metadata Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm pb-space-xs border-b border-surface-container">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-secondary font-bold tracking-tight">INC-BLR-4820</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant">ORD-1001</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Rahul Sharma • iPhone 17 256GB Black
+        </div>
+<div class="font-label-sm text-label-sm text-outline mt-0.5">
+          SKU: IP17-256-BLK • S/N: NX-88390
+        </div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase">
+          P1 Exception
+        </span>
+<span class="text-[10px] font-label-sm text-on-tertiary-container font-semibold mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">check_circle</span> Auto-Mitigated
+        </span>
+</div>
+</div>
+<!-- Ledger Block Data & Root Hash -->
+<div class="bg-surface-container-low rounded p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">account_tree</span>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">Ledger Block</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold">#18,922,014</span>
+</div>
+<div class="flex items-center justify-between gap-2 bg-surface-container-lowest px-2 py-1.5 rounded">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[9px] uppercase tracking-wider text-outline">Root Merkle Hash</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate select-all">
+            0x4f9a77c3e1208fb944aa0d8832a83d2c69b240e5
+          </span>
+</div>
+<button class="shrink-0 p-1 rounded hover:bg-surface-container text-on-surface-variant active:text-secondary" id="copy-hash-btn" title="Copy Hash">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-[11px] pt-0.5">
+<span class="text-on-surface-variant font-body-sm">Data State: <strong class="text-on-surface">0 Loss • Archived</strong></span>
+<span class="text-on-tertiary-container font-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span> Sealed &amp; Validated
+        </span>
+</div>
+</div>
+</div>
+<!-- Raft Consensus Cluster State (3 Nodes Matrix) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between px-0.5">
+<span class="font-label-lg text-label-lg text-on-surface">Raft Consensus Quorum</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">3/3 Nodes Active</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5">
+<!-- Node 01 -->
+<div class="bg-surface-container-lowest p-2 rounded-lg flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Node-01</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] px-1 py-0.2 rounded w-fit uppercase font-semibold">
+          Leader
+        </span>
+<div class="mt-1 flex flex-col">
+<span class="font-label-sm text-[10px] text-outline">Latency</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">0.72 ms</span>
+</div>
+<div class="text-[9px] font-label-sm text-on-tertiary-container flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[11px]">verified</span> Sig Valid
+        </div>
+</div>
+<!-- Node 02 -->
+<div class="bg-surface-container-lowest p-2 rounded-lg flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Node-02</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[9px] px-1 py-0.2 rounded w-fit uppercase font-medium">
+          Follower
+        </span>
+<div class="mt-1 flex flex-col">
+<span class="font-label-sm text-[10px] text-outline">Latency</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">0.81 ms</span>
+</div>
+<div class="text-[9px] font-label-sm text-on-tertiary-container flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[11px]">verified</span> Sig Valid
+        </div>
+</div>
+<!-- Node 04 -->
+<div class="bg-surface-container-lowest p-2 rounded-lg flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Node-04</span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+</div>
+<span class="bg-surface-container text-on-surface-variant font-label-sm text-[9px] px-1 py-0.2 rounded w-fit uppercase font-medium">
+          Quorum
+        </span>
+<div class="mt-1 flex flex-col">
+<span class="font-label-sm text-[10px] text-outline">Latency</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">0.69 ms</span>
+</div>
+<div class="text-[9px] font-label-sm text-on-tertiary-container flex items-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-[11px]">verified</span> Sig Valid
+        </div>
+</div>
+</div>
+<!-- ZK Proof Verification Strip -->
+<div class="bg-surface-container-high/60 rounded-lg px-2.5 py-1.5 flex items-center justify-between mt-0.5">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary">enhanced_encryption</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Multi-Tenant Zero-Knowledge Proof</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold shrink-0">100% Verified</span>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-lowest rounded-lg pl-9 pr-3 py-2 text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="log-search-input" placeholder="Search event, actor ID, signature..." type="text"/>
+</div>
+<!-- Filter Chips Scrollable Track -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar pt-0.5 text-nowrap">
+<button class="filter-btn active-chip px-2.5 py-1 rounded font-label-sm text-label-sm bg-primary text-on-primary font-semibold shadow-sm" data-filter="all">
+        All (6)
+      </button>
+<button class="filter-btn px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="ai">
+        Autonomous AI
+      </button>
+<button class="filter-btn px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="human">
+        Human Override
+      </button>
+<button class="filter-btn px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="crypto">
+        Cryptographic Bind
+      </button>
+<button class="filter-btn px-2.5 py-1 rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-filter="security">
+        Security
+      </button>
+</div>
+</div>
+<!-- Chronological Immutable Ledger Timeline -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-0.5">
+<span class="font-label-lg text-label-lg text-on-surface tracking-tight">Ledger Event Stream</span>
+<span class="font-label-sm text-label-sm text-outline">Reverse Chronological</span>
+</div>
+<div class="flex flex-col gap-2" id="events-container">
+<!-- Event 1: OTP Custody Handshake -->
+<div class="event-item bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2" data-category="crypto security human">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="p-1 rounded bg-tertiary-container text-on-tertiary-container material-symbols-outlined text-[16px]">fingerprint</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">BIOMETRIC_OTP_CUSTODY_HANDSHAKE</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0">15:39:12 IST</span>
+</div>
+<div class="flex flex-col gap-1 pl-6 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<strong class="text-on-surface">Actor:</strong> Porter Rider Suresh K. (KA-01-EQ-4921) &amp; Customer
+          </div>
+<p class="text-on-surface leading-relaxed">
+            Biometric confirmation &amp; NFC seal <span class="font-label-sm text-label-sm text-secondary font-semibold">#NT-90812-BLR</span> cryptographically unlocked with OTP verification. Faraday lock state: <strong class="text-on-tertiary-container font-semibold">UNSEALED</strong>.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1.5 mt-0.5 border-t border-surface-container text-[10px] font-label-sm">
+<span class="text-outline">Latency: <strong class="text-on-surface">1.1ms</strong></span>
+<span class="text-on-surface-variant select-all">Sig: <strong class="font-label-sm text-secondary">0xa8f1...39c0</strong></span>
+<span class="text-on-tertiary-container font-semibold">Consensus Confirmed</span>
+</div>
+</div>
+<!-- Event 2: Autonomous Reroute Executed -->
+<div class="event-item bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2" data-category="human ai">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="p-1 rounded bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-[16px]">alt_route</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">AUTONOMOUS_REROUTE_EXECUTED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0">15:27:18 IST</span>
+</div>
+<div class="flex flex-col gap-1 pl-6 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<strong class="text-on-surface">Actor:</strong> Ops Manager (Manual Approval via Console BLR-OPS-09)
+          </div>
+<p class="text-on-surface leading-relaxed">
+            Defence Colony Bypass vector committed to rider GPS telemetry. Dynamic corridor delta: <span class="text-secondary font-medium">+1.3km</span> / <strong class="text-on-tertiary-container">-14.5 min saved</strong>.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1.5 mt-0.5 border-t border-surface-container text-[10px] font-label-sm">
+<span class="text-outline">Latency: <strong class="text-on-surface">0.84ms</strong></span>
+<span class="text-on-surface-variant select-all">Sig: <strong class="font-label-sm text-secondary">0x7c4e...11a2</strong></span>
+<span class="text-on-tertiary-container font-semibold">Consensus Confirmed</span>
+</div>
+</div>
+<!-- Event 3: AI Engine Proposal Generated -->
+<div class="event-item bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2" data-category="ai">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="p-1 rounded bg-surface-container-highest text-on-surface material-symbols-outlined text-[16px]">psychology</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">AI_ENGINE_PROPOSAL_GENERATED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0">15:25:40 IST</span>
+</div>
+<div class="flex flex-col gap-1 pl-6 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<strong class="text-on-surface">Actor:</strong> Nexora ML Mitigator (Agent: DISPATCH-BLR-09)
+          </div>
+<p class="text-on-surface leading-relaxed">
+            Evaluated 3 dynamic mitigation topologies. Option A selected with <strong class="text-secondary font-semibold">98.4% corridor arrival confidence</strong>. Dispatched to quorum for approval.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1.5 mt-0.5 border-t border-surface-container text-[10px] font-label-sm">
+<span class="text-outline">Latency: <strong class="text-on-surface">0.42ms</strong></span>
+<span class="text-on-surface-variant select-all">Sig: <strong class="font-label-sm text-secondary">0x3d9b...88fe</strong></span>
+<span class="text-on-tertiary-container font-semibold">Consensus Confirmed</span>
+</div>
+</div>
+<!-- Event 4: Zero Velocity Anomaly Trigger -->
+<div class="event-item bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2" data-category="security ai">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="p-1 rounded bg-error-container text-on-error-container material-symbols-outlined text-[16px]">warning</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">ZERO_VELOCITY_ANOMALY_TRIGGER</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0">15:22:04 IST</span>
+</div>
+<div class="flex flex-col gap-1 pl-6 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<strong class="text-on-surface">Actor:</strong> Telematics Ingestion Pipeline (HAL Node 07)
+          </div>
+<p class="text-on-surface leading-relaxed">
+            Stationary dwell exceeding 6.2 min on 100ft Main Arterial. Civic urban data feed matched: BWSSB Metro pipe rupture. Triggered Incident INC-BLR-4820.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1.5 mt-0.5 border-t border-surface-container text-[10px] font-label-sm">
+<span class="text-outline">Latency: <strong class="text-on-surface">0.18ms</strong></span>
+<span class="text-on-surface-variant select-all">Sig: <strong class="font-label-sm text-secondary">0x19fa...aa40</strong></span>
+<span class="text-on-tertiary-container font-semibold">Consensus Confirmed</span>
+</div>
+</div>
+<!-- Event 5: Atomic Hardware Bind Locked -->
+<div class="event-item bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2" data-category="crypto human">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="p-1 rounded bg-surface-container-high text-on-surface material-symbols-outlined text-[16px]">qr_code_scanner</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">ATOMIC_HARDWARE_BIND_LOCKED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0">14:46:10 IST</span>
+</div>
+<div class="flex flex-col gap-1 pl-6 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<strong class="text-on-surface">Actor:</strong> Warehouse Terminal Zebra-TC57-BLR-09 (Operator Ravi K.)
+          </div>
+<p class="text-on-surface leading-relaxed">
+            Hardware Serial <span class="font-label-sm text-label-sm text-secondary font-semibold">#NX-88390</span> &amp; IMEI 9920148-01 permanently bound to ORD-1001. Scale inspection: <strong class="text-on-tertiary-container">242.4g PASS</strong>.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1.5 mt-0.5 border-t border-surface-container text-[10px] font-label-sm">
+<span class="text-outline">Latency: <strong class="text-on-surface">0.95ms</strong></span>
+<span class="text-on-surface-variant select-all">Sig: <strong class="font-label-sm text-secondary">0xbb02...51d9</strong></span>
+<span class="text-on-tertiary-container font-semibold">Consensus Confirmed</span>
+</div>
+</div>
+<!-- Event 6: Payment Settled & Atomic Decrement -->
+<div class="event-item bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2" data-category="crypto">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<span class="p-1 rounded bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-[16px]">payments</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">PAYMENT_SETTLED_STOCK_DECREMENT</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0">14:38:00 IST</span>
+</div>
+<div class="flex flex-col gap-1 pl-6 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<strong class="text-on-surface">Actor:</strong> HDFC UPI Webhook Gateway &amp; Raft Quorum Node 01
+          </div>
+<p class="text-on-surface leading-relaxed">
+            ₹1,34,900 settled. Atomic stock decrement of SKU <span class="font-label-sm text-label-sm text-on-surface font-semibold">IP17-256-BLK</span> from 1 to 0 executed across partition without deadlock.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1.5 mt-0.5 border-t border-surface-container text-[10px] font-label-sm">
+<span class="text-outline">Latency: <strong class="text-on-surface">0.84ms</strong></span>
+<span class="text-on-surface-variant select-all">Sig: <strong class="font-label-sm text-secondary">0x91e2...a83c</strong></span>
+<span class="text-on-tertiary-container font-semibold">Consensus Confirmed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Security Verification & Tamper-Proof Seals -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm mt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-tertiary-container">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Ledger Immutable Checksum</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">PASSED • ZERO MUTATION DETECTED</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-[24px]">task_alt</span>
+</div>
+<!-- Merkle Verification Details -->
+<div class="bg-surface-container-low rounded p-2.5 flex flex-col gap-1">
+<div class="flex items-center justify-between text-[11px] font-label-sm">
+<span class="text-outline uppercase tracking-wide">Merkle Tree Root Hash</span>
+<span class="text-secondary font-semibold select-all">0x9e88a...442d</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-label-sm">
+<span class="text-outline uppercase tracking-wide">Cryptographic Standard</span>
+<span class="text-on-surface font-medium">ECDSA secp256k1 + SHA-256</span>
+</div>
+</div>
+<!-- Enterprise Compliance Badges -->
+<div class="flex items-center flex-wrap gap-1.5 pt-0.5">
+<span class="bg-surface-container px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant font-semibold">
+        SOC-2 Type II
+      </span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant font-semibold">
+        ISO-27001
+      </span>
+<span class="bg-surface-container px-2 py-0.5 rounded font-label-sm text-label-sm text-on-tertiary-container font-semibold">
+        DPDP Act 2023 Compliant
+      </span>
+</div>
+<!-- Administrative Action Buttons -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 active:bg-surface-container-highest transition-colors shadow-sm" id="download-proof-btn">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+        Download Signed JSON-LD Proof
+      </button>
+<button class="w-full h-10 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 transition-colors" id="verify-offline-btn">
+<span class="material-symbols-outlined text-[18px] text-secondary">fact_check</span>
+        Verify Merkle Proof Offline
+      </button>
+<button class="w-full h-9 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors" id="dossier-btn">
+<span class="material-symbols-outlined text-[16px]">article</span>
+        Generate Incident Compliance Dossier (PDF)
+      </button>
+</div>
+</div>
+<!-- Toast Notification Container for Feedback -->
+<div class="hidden fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-primary-container text-on-primary px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition-opacity duration-300" id="action-toast">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-sm text-label-sm" id="toast-message">Copied to clipboard</span>
+</div>
+</div>
+<script>
+  (function() {
+    // Copy hash functionality
+    const copyBtn = document.getElementById('copy-hash-btn');
+    const toast = document.getElementById('action-toast');
+    const toastMsg = document.getElementById('toast-message');
+
+    function showToast(msg) {
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 2400);
+    }
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard?.writeText('0x4f9a77c3e1208fb944aa0d8832a83d2c69b240e5');
+        showToast('Merkle Root Hash copied to clipboard');
+      });
+    }
+
+    // Filter Chips
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const eventCards = document.querySelectorAll('.event-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        btn.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+
+        const filter = btn.dataset.filter;
+        eventCards.forEach(card => {
+          if (filter === 'all') {
+            card.classList.remove('hidden');
+          } else {
+            const categories = card.dataset.category || '';
+            if (categories.includes(filter)) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+
+    // Search Filtering
+    const searchInput = document.getElementById('log-search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        eventCards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (text.includes(query)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    }
+
+    // Action button listeners
+    const proofBtn = document.getElementById('download-proof-btn');
+    if (proofBtn) {
+      proofBtn.addEventListener('click', () => {
+        showToast('JSON-LD Proof bundle downloading...');
+      });
+    }
+
+    const verifyBtn = document.getElementById('verify-offline-btn');
+    if (verifyBtn) {
+      verifyBtn.addEventListener('click', () => {
+        showToast('Merkle tree root matched local keystore (0 err)');
+      });
+    }
+
+    const dossierBtn = document.getElementById('dossier-btn');
+    if (dossierBtn) {
+      dossierBtn.addEventListener('click', () => {
+        showToast('Generating signed regulatory PDF dossier...');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

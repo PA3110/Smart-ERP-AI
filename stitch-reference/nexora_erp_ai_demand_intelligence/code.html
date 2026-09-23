@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Demand Ai</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full gap-space-md">
+<!-- Interactive Product Selector Pill & Live Telemetry Strip -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-sm mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Stream SKU</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+        Telemetry Live
+      </span>
+</div>
+<!-- Dropdown Selector Button -->
+<div class="relative">
+<button class="w-full flex items-center justify-between bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg px-space-sm py-2 text-left" id="skuSelectorBtn">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">smartphone</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">iPhone 17</span>
+<span class="px-1 py-0.2 bg-surface-container-highest rounded text-on-surface-variant font-label-sm text-label-sm">IP17-256-BLK</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Global Launch Allocation #A-884</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">unfold_more</span>
+</button>
+<!-- Collapsible SKU Dropdown Menu -->
+<div class="hidden absolute top-full mt-1 left-0 w-full bg-surface-container-lowest rounded-xl shadow-xl z-20 overflow-hidden flex flex-col p-1" id="skuMenu">
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low text-left">
+<span class="font-label-lg text-label-lg text-on-surface">iPhone 17 (IP17-256-BLK)</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low text-left opacity-60">
+<span class="font-label-lg text-label-lg text-on-surface">MacBook Pro M4 (MBP-16-SLV)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stable</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-low text-left opacity-60">
+<span class="font-label-lg text-label-lg text-on-surface">Vision Air Pro (VAP-512-WHT)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Normal</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Real-Time Concurrency Warning Banner -->
+<div class="w-full rounded-xl bg-error-container text-on-error-container p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-16 h-16 bg-error/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm relative">
+<div class="w-8 h-8 rounded-lg bg-error/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-error text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-lg text-label-lg font-bold text-on-error-container tracking-tight">Demand Spike Detected</span>
+<span class="px-1.5 py-0.2 rounded bg-error text-on-error font-label-sm text-label-sm uppercase tracking-wider">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container mt-1 leading-snug">
+          iPhone 17 demand is <strong class="font-bold">300x</strong> the available stock. Atomic concurrency protection active on distributed cluster.
+        </p>
+</div>
+</div>
+</div>
+<!-- Operational KPI Metric Matrix -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1: Demand Inrush -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="w-1 absolute left-0 top-0 bottom-0 bg-error"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Demand</span>
+<span class="material-symbols-outlined text-error text-[18px]">bolt</span>
+</div>
+<div class="my-2">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-bold">300</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">hits</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block">Simultaneous purchase attempts</span>
+</div>
+<div class="flex items-center gap-1 pt-1 bg-surface-container-low -mx-space-md -mb-space-md p-space-xs px-space-md">
+<span class="material-symbols-outlined text-error text-[14px]">arrow_upward</span>
+<span class="font-label-sm text-label-sm text-error font-bold">+420%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">vs 1h baseline</span>
+</div>
+</div>
+<!-- Card 2: Physical Inventory -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="w-1 absolute left-0 top-0 bottom-0 bg-secondary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Live Inventory</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">inventory_2</span>
+</div>
+<div class="my-2">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-error font-bold">1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 0 locked</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1 overflow-hidden">
+<div class="bg-error h-full rounded-full w-[2%]"></div>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low -mx-space-md -mb-space-md p-space-xs px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avail: <strong class="text-on-surface font-bold">1 unit</strong></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hold: 0</span>
+</div>
+</div>
+<!-- Card 3: Stock-Out Risk -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm col-span-2 flex flex-col gap-2 relative overflow-hidden">
+<div class="w-1 absolute left-0 top-0 bottom-0 bg-error"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-error font-bold uppercase tracking-wider">Depletion Countdown</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">HIGH RISK</span>
+</div>
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">&lt; 60 seconds</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Potential immediate stock exhaustion</span>
+</div>
+<div class="px-3 py-1.5 rounded-lg bg-surface-container flex flex-col items-center shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Burn Rate</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">5.0/sec</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Demand & Velocity Visualizer Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">insights</span>
+<span class="font-headline-md text-headline-md text-on-surface">Demand &amp; Velocity</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Comparative real-time trajectory</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container px-2 py-0.5 rounded bg-surface-container font-semibold">T-0 Realtime</span>
+</div>
+<!-- Comparative SVG Chart -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm relative">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-1 px-1">
+<span>Units Demanded</span>
+<span class="text-error font-bold font-label-md text-label-md">Peak Spike: 300</span>
+</div>
+<svg class="w-full h-32 overflow-visible" viewbox="0 0 320 120">
+<defs>
+<lineargradient id="spikeGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ba1a1a" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#ba1a1a" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="forecastGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006398" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#006398" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle Grid Guidelines -->
+<line stroke="#c5c6cd" stroke-dasharray="2 2" stroke-opacity="0.3" x1="0" x2="320" y1="100" y2="100"></line>
+<line stroke="#c5c6cd" stroke-dasharray="2 2" stroke-opacity="0.3" x1="0" x2="320" y1="60" y2="60"></line>
+<line stroke="#c5c6cd" stroke-dasharray="2 2" stroke-opacity="0.3" x1="0" x2="320" y1="20" y2="20"></line>
+<!-- Historical Area & Baseline (12/hr) -->
+<path d="M 0 98 L 80 96 L 140 97 L 180 95 L 180 110 L 0 110 Z" fill="#eff4ff"></path>
+<path d="M 0 98 L 80 96 L 140 97 L 180 95" fill="none" stroke="#75777d" stroke-width="2"></path>
+<!-- Forecast Path (Projected >300 units) -->
+<path d="M 180 20 L 240 18 L 320 14 L 320 110 L 180 110 Z" fill="url(#forecastGrad)"></path>
+<path d="M 180 20 L 240 18 L 320 14" fill="none" stroke="#006398" stroke-dasharray="3 3" stroke-width="2"></path>
+<!-- Active Spike Curve (12 -> 300) -->
+<path d="M 140 97 C 160 90, 168 35, 180 20 L 180 110 L 140 110 Z" fill="url(#spikeGrad)"></path>
+<path d="M 140 97 C 160 90, 168 35, 180 20" fill="none" stroke="#ba1a1a" stroke-width="3"></path>
+<!-- Critical Current Marker -->
+<circle class="animate-pulse" cx="180" cy="20" fill="#ba1a1a" r="5"></circle>
+<circle cx="180" cy="20" fill="#ffffff" r="2"></circle>
+</svg>
+<!-- Chart Micro Legend -->
+<div class="flex items-center justify-between pt-2 px-1 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1">
+<span class="w-2 h-0.5 bg-outline"></span>
+<span>Hist: 12/hr</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-0.5 bg-error"></span>
+<span class="text-error font-bold">Spike: 300</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-0.5 bg-secondary border-dashed"></span>
+<span class="text-secondary">Fcst: 300+</span>
+</div>
+</div>
+</div>
+<!-- Intent Score Breakdown Pill Box -->
+<div class="rounded-lg bg-surface-container-high p-space-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[20px]">verified_user</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">186 Verified High-Intent</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pre-authorized wallet / active carts</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-lg text-label-lg text-secondary font-bold">62.0%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Confidence</span>
+</div>
+</div>
+</div>
+<!-- Operational Contextual Imagery (Logistics Node & High-Velocity SKU) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-sm flex flex-col">
+<div class="h-20 w-full rounded overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A high-tech modern automated fulfillment center with robotic arms sorting sleek black smartphone packaging along luminous conveyor belts in deep navy and electric blue lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhH5q5CkcO64O5FEqwMIMJiX0KU6x8gD3l9sJe3PtrMXGGo9AjQym2OpLMLETt8q479Y49jR3IIPJtANDghCBP1cijehPaBkqzRxGWzQqTor0t6vBLGazqxp537QZlBcRSdPS8VD_SV-uZH724yMoUi7bbgOFJHCU5peHSBONP-It9rwRJKcJgiDZIgKAPRprnnevyLtJS5xLkRHCzaWHRIcwtRTtwgO_hAM51IR1ntJGL_MX87D64"/>
+<span class="absolute bottom-1 left-1 px-1 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm">WH-Alpha East</span>
+</div>
+<div class="p-1.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Nearest Node</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lead Time: 2.5 hrs</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-xs shadow-sm flex flex-col">
+<div class="h-20 w-full rounded overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Close up cinematic shot of modern luxury flagship matte black titanium smartphone on technical carbon fiber inspection pedestal with holographic supply metrics overlay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATsUlVv-kOs_FKkrCorKc_SLFCheEkRstQJK0_5aV92FR944fewMhiq1LPUxcaZBLfLTsXYr1JGFXHKq1kSZtgCIQBX0wTH63iSOKABlecMziESOrZgE0uGJhLYKGeC1RUNyC07C_sYQ-gUP1JzjBlkYKkzlEtWergZ7n8JY_n8en-GDehEOlJ3g2OCLIA9Wcv_LsBS37rTlnvz33wRF8SXRSx0IAqbNid9dfloZMLz9ZVBE52WSyU"/>
+<span class="absolute bottom-1 left-1 px-1 py-0.5 rounded bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm">Batch IP17-B</span>
+</div>
+<div class="p-1.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Spec / Allocation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Global Release A</span>
+</div>
+</div>
+</div>
+<!-- AI Actionable Recommendation Card (Governance Compliant) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-md bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">AI Recommended Action</span>
+</div>
+<!-- Recommendation Content Box -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-lg text-label-lg text-secondary font-bold">Policy Trigger #REC-3091</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        Initiate immediate emergency stock replenishment (<strong class="font-bold">+500 units</strong>) &amp; route excess <strong class="font-bold text-error">299 buyers</strong> to Smart Waitlist with prioritized back-in-stock reservation rights.
+      </p>
+</div>
+<!-- Micro-Governance Impact Details -->
+<div class="grid grid-cols-2 gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1 bg-surface-container p-space-xs rounded">
+<span class="material-symbols-outlined text-[15px] text-secondary">check_circle</span>
+<span>Saved Revenue: ~$299K</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container p-space-xs rounded">
+<span class="material-symbols-outlined text-[15px] text-secondary">security</span>
+<span>Zero Cart Collision</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-1">
+<button class="w-full h-11 px-space-md bg-primary hover:bg-surface-container-highest text-on-primary font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-transform" id="reviewBtn">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Review Recommendation</span>
+</button>
+<button class="w-full h-11 px-space-md bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-transform" id="waitlistBtn">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+<span>Route 299 to Smart Waitlist</span>
+</button>
+</div>
+<!-- Compliance & Governance Disclaimer -->
+<div class="flex items-start gap-1.5 pt-1">
+<span class="material-symbols-outlined text-outline text-[16px] shrink-0 mt-0.5">gavel</span>
+<p class="font-body-sm text-body-sm text-outline leading-tight">
+        Nexora AI suggests real-time operational insights; consequential procurement actions require authorized managerial approval under SOX &amp; ISO-9001 governance controls.
+      </p>
+</div>
+</div>
+<!-- Verification Seal Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-bold truncate">Verification Seal #NEX-99214-A</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate">SHA256: 4f8b...e912 • Agent: AI-DMD-04</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm shrink-0">Synced</span>
+</div>
+<!-- Success Toast Modal (Toggled by Actions) -->
+<div class="hidden fixed bottom-20 left-4 right-4 bg-primary-container text-on-primary rounded-xl p-space-md shadow-xl z-50 flex items-center justify-between transition-all" id="actionToast">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[24px]">task_alt</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-surface-bright" id="toastTitle">Action Transmitted</span>
+<span class="font-body-sm text-body-sm text-on-primary-container" id="toastSub">Managerial approval workflow triggered</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-primary-container hover:text-surface-bright" id="toastCloseBtn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  // SKU Dropdown Toggle micro-interaction
+  const skuSelectorBtn = document.getElementById('skuSelectorBtn');
+  const skuMenu = document.getElementById('skuMenu');
+  if (skuSelectorBtn && skuMenu) {
+    skuSelectorBtn.addEventListener('click', () => {
+      skuMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Toast Trigger for Managerial Flow
+  const reviewBtn = document.getElementById('reviewBtn');
+  const waitlistBtn = document.getElementById('waitlistBtn');
+  const actionToast = document.getElementById('actionToast');
+  const toastTitle = document.getElementById('toastTitle');
+  const toastSub = document.getElementById('toastSub');
+  const toastCloseBtn = document.getElementById('toastCloseBtn');
+
+  function showToast(title, subtitle) {
+    if (actionToast && toastTitle && toastSub) {
+      toastTitle.textContent = title;
+      toastSub.textContent = subtitle;
+      actionToast.classList.remove('hidden');
+      setTimeout(() => {
+        actionToast.classList.add('hidden');
+      }, 4000);
+    }
+  }
+
+  if (reviewBtn) {
+    reviewBtn.addEventListener('click', () => {
+      showToast('Procurement Request Generated', 'Ticket #PR-8820 queued for Director sign-off');
+    });
+  }
+
+  if (waitlistBtn) {
+    waitlistBtn.addEventListener('click', () => {
+      showToast('Smart Waitlist Dispatched', '299 purchase intents safely converted to pre-orders');
+    });
+  }
+
+  if (toastCloseBtn && actionToast) {
+    toastCloseBtn.addEventListener('click', () => {
+      actionToast.classList.add('hidden');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

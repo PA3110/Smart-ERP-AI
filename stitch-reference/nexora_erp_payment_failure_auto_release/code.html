@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Demand Ai</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full gap-space-md">
+<!-- Status Banner: High-Visibility Operational Failure & Auto-Release -->
+<div class="w-full bg-error-container rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]" style="font-variation-settings: 'FILL' 1;">error</span>
+<span class="font-label-lg text-label-lg text-on-error-container tracking-wide uppercase">Payment Failed • Lock Released</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-error font-label-sm text-label-sm">NPCI-504</span>
+</div>
+<div class="mt-space-xs text-on-surface">
+<p class="font-body-md text-body-md text-on-surface font-semibold">UPI Bank Gateway Timeout (300s Limit Exceeded)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Atomic hold on Serial <span class="font-label-md text-label-md text-on-surface font-semibold">#NX-88390</span> auto-revoked at 14:38:14 IST. Zero deadlocks sustained.</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-error-container uppercase">Lock RES-1001 Revoked</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">ORD-1001 • Rahul Sharma</span>
+</div>
+</div>
+<!-- SKU & Product Real-Time Snapshot -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-surface text-[24px]">smartphone</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">iPhone 17 256GB Black</span>
+<span class="px-1.5 py-0.2 bg-surface-container-high text-on-surface-variant rounded font-label-sm text-label-sm">SKU: IP17-256-BLK</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mt-0.5">Unit #NX-88390 • ₹79,999.00</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-2 py-1 bg-surface-container text-secondary font-label-sm text-label-sm rounded uppercase font-semibold">Flagship Allocation</span>
+</div>
+</div>
+<!-- Resolved Single Source of Truth Inventory Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-lg text-label-lg text-on-surface">Resolved Stock Topology</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-low px-2 py-0.5 rounded">Reversion Complete</span>
+</div>
+<!-- 4-Pillar Inventory Matrix -->
+<div class="grid grid-cols-4 gap-space-xs mt-space-sm">
+<div class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Total</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pool Max</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-highest text-center relative overflow-hidden">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Available</span>
+<span class="font-label-lg text-label-lg text-secondary font-bold mt-0.5">1</span>
+<span class="font-label-sm text-label-sm text-on-secondary-container">0 → 1</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Reserved</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant font-semibold mt-0.5">0</span>
+<span class="font-label-sm text-label-sm text-error">1 → 0</span>
+</div>
+<div class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sold</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stable</span>
+</div>
+</div>
+<div class="mt-space-sm p-space-xs bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[16px] shrink-0">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Atomic Lock RES-1001 Cleared • Zero Orphan Locks</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono shrink-0">Δt 0.21s</span>
+</div>
+</div>
+<!-- Auto-Allocation & Graceful Recovery Mechanism -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_horiz</span>
+<span class="font-label-lg text-label-lg text-on-surface">Auto-Handover to Waitlist #1</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Protocol NX-AL-02</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Nexora Concurrency Engine automatically shifted allocation rights to next evaluated priority.</p>
+<!-- Successor Card -->
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="font-label-md text-label-md text-on-secondary-fixed">PP</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Priya Patel</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Primary Now</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intent Score: 91/100 • Escrow Pre-Auth Active</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md text-secondary font-semibold" id="hold-countdown">09:54</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Hold Window</p>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full w-[94%]" id="hold-progress"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant mt-0.5">
+<span class="font-label-sm text-label-sm">Unit: #NX-88390 Target Lock</span>
+<span class="font-label-sm text-label-sm">Dispatched via WhatsApp &amp; In-App</span>
+</div>
+</div>
+</div>
+<!-- Customer Recovery Options for Rahul Sharma -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Customer Recovery Path (Rahul Sharma)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Retention Engine</span>
+</div>
+<!-- Recovery Option 1: Alternate Gateway / Pre-Claim Retry -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">credit_card</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Instant Card / NetBanking Retry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Attempt secondary gateway before Priya Patel finalizes token checkout.</span>
+</div>
+</div>
+<button class="h-9 px-space-sm bg-primary text-on-primary rounded font-label-sm text-label-sm shrink-0 active:opacity-80 transition-opacity">
+        Retry Now
+      </button>
+</div>
+<!-- Recovery Option 2: Retain Priority in Smart Waitlist -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-on-tertiary-container text-[22px] shrink-0 mt-0.5">history_toggle_off</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Retain Waitlist Priority #1</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Intent 94/100</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight mt-0.5">Automatically locks first unit from inbound Batch #B-409 arriving 18:00 IST.</span>
+</div>
+</div>
+<button class="h-9 px-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded font-label-sm text-label-sm shrink-0 active:opacity-80 transition-opacity">
+        Retain Lead
+      </button>
+</div>
+<!-- Concierge Line -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span class="font-label-sm text-label-sm">Bank escalation ticket generated: #TK-8812</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary font-semibold hover:underline">
+        Direct Concierge Call
+      </button>
+</div>
+</div>
+<!-- Immutable Distributed Audit Trail -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface text-[18px]">rule</span>
+<span class="font-label-lg text-label-lg text-on-surface">Ledger Consensus &amp; Audit Trail</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">HASH: 0x8f2c...41c2</span>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono shrink-0">14:38:12.04</span>
+<div class="flex items-center gap-1 min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-error shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">UPI Handshake timed out (NPCI-504, Gateway: HDFC-PG)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono shrink-0">14:38:14.00</span>
+<div class="flex items-center gap-1 min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Atomic Lock RES-1001 Revocation finalized by Master Kernel</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono shrink-0">14:38:14.22</span>
+<div class="flex items-center gap-1 min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">In-memory stock state reverted: Available: 1, Reserved: 0</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono shrink-0">14:38:15.10</span>
+<div class="flex items-center gap-1 min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Push notification + Webhook triggered for Priya Patel (P2)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono shrink-0">14:38:15.45</span>
+<div class="flex items-center gap-1 min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Rahul Sharma CRM logged: Cart Abort (Payment Timeout)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-xs bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-1 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate font-mono">Consensus: Raft-Quorum Node 03 (Ack 12/12)</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary font-semibold shrink-0">Verify Proof</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple countdown ticker simulation for Hold Window
+  (function() {
+    let seconds = 594;
+    const cdEl = document.getElementById('hold-countdown');
+    const barEl = document.getElementById('hold-progress');
+    
+    if (cdEl && barEl) {
+      setInterval(function() {
+        if (seconds > 0) {
+          seconds--;
+          const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+          const s = String(seconds % 60).padStart(2, '0');
+          cdEl.textContent = m + ':' + s;
+          const pct = Math.max(0, (seconds / 600) * 100);
+          barEl.style.width = pct + '%';
+        }
+      }, 1000);
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

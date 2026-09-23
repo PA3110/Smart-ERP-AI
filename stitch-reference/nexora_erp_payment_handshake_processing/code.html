@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Demand Ai</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-8">
+<!-- Top Banner: Atomic Lock Guard Active -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-sm mb-space-md relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="relative flex h-2.5 w-2.5 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary-container"></span>
+</span>
+<span class="font-label-lg text-label-lg text-on-surface uppercase tracking-tight truncate">Atomic Lock Guard Active</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-space-xs py-0.5 rounded shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">timer</span>
+<span class="font-label-md text-label-md text-on-surface tabular-nums" id="countdownTimer">08:14</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 mb-space-xs">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">token</span>
+        RES-1001
+      </span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container-highest text-on-secondary-fixed-variant font-label-sm text-label-sm">
+        Priority 1 of 1 · Lock #NX-88390
+      </span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+        SKU: IP17-256-BLK
+      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+      Holding unit for <strong class="text-on-surface font-semibold">Rahul Sharma</strong> (HDFC ****4012). Inventory is physically locked on in-memory fabric and cannot be evicted while handshake is active.
+    </p>
+<!-- Micro-progress line -->
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden mt-space-sm">
+<div class="bg-secondary h-full rounded-full w-[82%] transition-all duration-1000" id="reservationBar"></div>
+</div>
+</div>
+<!-- Primary Central Verification Radar / Orbital Handshake Graphic -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col items-center text-center relative overflow-hidden mb-space-md">
+<!-- Concentric Orbital Radar SVG -->
+<div class="relative w-36 h-36 my-space-xs flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 160 160">
+<!-- Static outer orbital boundary -->
+<circle class="text-surface-container-high" cx="80" cy="80" r="72" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></circle>
+<circle class="text-surface-container" cx="80" cy="80" r="54" stroke="currentColor" stroke-width="1.5"></circle>
+<!-- Rotating Handshake Beam Ring 1 -->
+<circle class="text-secondary animate-spin" cx="80" cy="80" r="64" stroke="currentColor" stroke-dasharray="24 160" stroke-linecap="round" stroke-width="2" style="animation-duration: 4s; transform-origin: center;"></circle>
+<!-- Counter Rotating Pulse Ring 2 -->
+<circle class="text-on-tertiary-container animate-spin" cx="80" cy="80" r="44" stroke="currentColor" stroke-dasharray="18 100" stroke-linecap="round" stroke-width="2" style="animation-duration: 2.8s; animation-direction: reverse; transform-origin: center;"></circle>
+<!-- Core Node Ring -->
+<circle class="fill-surface-container-low" cx="80" cy="80" r="30"></circle>
+<circle class="fill-surface-container-lowest" cx="80" cy="80" r="24"></circle>
+</svg>
+<!-- Center Icon & Pulse Status -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary text-[28px] animate-pulse">sync_saved_locally</span>
+</div>
+<!-- Live floating beacon badge -->
+<div class="absolute -bottom-1 bg-primary-container text-on-primary px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span class="font-label-sm text-label-sm">HANDSHAKE 2/3</span>
+</div>
+</div>
+<!-- Central Status Typography -->
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold mb-0.5 mt-space-xs">
+      Unified Payments Interface
+    </span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-0.5">
+      ₹79,999.00
+    </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[290px] mb-space-sm">
+      Routing encrypted auth call to <span class="font-medium text-on-surface">NPCI / HDFC Bank</span> for Rahul Sharma (<span class="font-label-sm text-label-sm text-on-surface">rahul@okhdfcbank</span>).
+    </p>
+<!-- Live Telemetry / Latency Indicator Strip -->
+<div class="w-full grid grid-cols-2 gap-space-xs pt-space-xs bg-surface-container-low rounded-lg p-space-xs">
+<div class="flex flex-col items-start px-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sync Latency</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">1.4ms</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container">(Sub-Tick)</span>
+</div>
+</div>
+<div class="flex flex-col items-start px-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lock Contention</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-on-tertiary-container">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">0 Conflicts</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Distributed Consensus Ledger Pipeline -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">account_tree</span>
+<span class="font-label-lg text-label-lg text-on-surface uppercase tracking-tight">Ledger Consensus Pipeline</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant">Step 2 Active</span>
+</div>
+<!-- Node Steps Flow -->
+<div class="flex flex-col gap-space-sm">
+<!-- Node 1: Stock Isolation (Completed) -->
+<div class="flex items-start gap-space-sm p-space-xs rounded bg-surface-container-low">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">done</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">1. Atomic Stock Isolation</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">RESOLVED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">
+            Physical Unit #NX-88390-A locked · 299 competitor threads held
+          </span>
+</div>
+</div>
+<!-- Node 2: Banking Gateway Handshake (Active In Progress) -->
+<div class="flex items-start gap-space-sm p-space-xs rounded bg-secondary-fixed/40">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[15px] animate-spin">refresh</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">2. Bank Gateway Handshake</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold animate-pulse">IN TRANSIT</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+            Awaiting UPI intent ping / OTP approval via <strong class="text-on-surface">HDFC Bank App</strong>
+</span>
+<!-- Dynamic packet transmission tracker -->
+<div class="flex items-center gap-1 mt-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+<span id="telemetryPackets">Sending handshake packet #41829...</span>
+</div>
+</div>
+</div>
+<!-- Node 3: ERP Ledger Decrement (Queued) -->
+<div class="flex items-start gap-space-sm p-space-xs rounded opacity-75">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">3. ERP Ledger &amp; Inventory Decrement</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">QUEUED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+            Scheduled commit: Total 1, Avail 0, Sold 1 on Ledger ORD-1001
+          </span>
+</div>
+</div>
+<!-- Node 4: CRM Customer 360 Hook (Queued) -->
+<div class="flex items-start gap-space-sm p-space-xs rounded opacity-75">
+<div class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center shrink-0 mt-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">pending</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">4. Customer 360 Event Hook</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">STANDBY</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+            Pre-staged: Tier-1 priority warranty &amp; dispatch token issuance
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Safeguard & Non-Drop Guarantee Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mb-space-md relative overflow-hidden">
+<div class="flex items-start gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<h4 class="font-label-lg text-label-lg text-on-surface">Nexora Zero-Drop Lock Guarantee</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-normal">
+          If your network drops or cellular switch occurs, reservation token <strong class="text-on-surface">RES-1001</strong> remains sealed. Your iPhone 17 will never be handed to waitlist or high-velocity scalper bots during this session.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-space-xs py-1 rounded mt-space-xs">
+<span class="material-symbols-outlined text-error text-[16px] shrink-0">warning</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">
+        Do not hit back, refresh, or close this window while consensus synchronizes.
+      </span>
+</div>
+</div>
+<!-- Action Controls & Verification Simulation -->
+<div class="flex flex-col gap-space-xs w-full mb-space-md">
+<!-- Primary Instant Trigger -->
+<button class="w-full h-11 bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-xs transition-all shadow-sm" id="simulateSuccessBtn">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Simulate Bank Confirmation (Pass Handshake)</span>
+</button>
+<!-- Secondary Push Resend / Trigger -->
+<button class="w-full h-10 bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest text-on-surface font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-xs transition-colors" id="resendPushBtn">
+<span class="material-symbols-outlined text-[18px] text-secondary">notifications_active</span>
+<span>Resend UPI Notification to App</span>
+</button>
+</div>
+<!-- Cryptographic Audit Trail Hash Trigger -->
+<div class="w-full flex flex-col items-center justify-center text-center pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Ledger Hash: <span class="font-label-md text-label-md text-on-surface">0x8f2c7a9...4a19b0</span></span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-0.5">
+<span>Inspect distributed trace receipts</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</button>
+</div>
+<!-- Success Toast Overlay (Appears when simulated) -->
+<div class="fixed inset-x-4 top-32 z-50 bg-primary-container text-on-primary p-space-md rounded-xl shadow-xl flex flex-col gap-space-xs transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-4" id="handshakeSuccessModal">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-tertiary-fixed-dim text-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-label-lg text-label-lg text-on-primary">Handshake Verified by NPCI</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary-container">ORD-1001</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+      Payment of ₹79,999 sealed. Unit #NX-88390-A assigned to Rahul Sharma. Decrement executed across distributed node clusters. Redirecting...
+    </p>
+</div>
+</div>
+<script>
+  (function() {
+    // Countdown timer logic
+    var totalSeconds = 8 * 60 + 14;
+    var timerEl = document.getElementById('countdownTimer');
+    var progressEl = document.getElementById('reservationBar');
+    var initialSeconds = 10 * 60; // 10m base
+
+    var interval = setInterval(function() {
+      if (totalSeconds <= 0) {
+        clearInterval(interval);
+        if (timerEl) timerEl.textContent = "00:00";
+        return;
+      }
+      totalSeconds--;
+      var mins = Math.floor(totalSeconds / 60);
+      var secs = totalSeconds % 60;
+      if (timerEl) {
+        timerEl.textContent = (mins < 10 ? "0" + mins : mins) + ":" + (secs < 10 ? "0" + secs : secs);
+      }
+      if (progressEl) {
+        var pct = (totalSeconds / initialSeconds) * 100;
+        progressEl.style.width = Math.max(pct, 5) + "%";
+      }
+    }, 1000);
+
+    // Telemetry packet loop simulation
+    var packetEl = document.getElementById('telemetryPackets');
+    var packetNum = 41829;
+    setInterval(function() {
+      if (!packetEl) return;
+      packetNum += Math.floor(Math.random() * 7) + 1;
+      var latency = (1.2 + Math.random() * 0.5).toFixed(1);
+      packetEl.textContent = "Syncing packet #" + packetNum + " (" + latency + "ms) via HDFC-GATEWAY";
+    }, 1800);
+
+    // Action simulation button
+    var simBtn = document.getElementById('simulateSuccessBtn');
+    var modal = document.getElementById('handshakeSuccessModal');
+    if (simBtn && modal) {
+      simBtn.addEventListener('click', function() {
+        simBtn.disabled = true;
+        simBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Committing Ledger...</span>';
+        
+        setTimeout(function() {
+          modal.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+          modal.classList.add('opacity-100', 'translate-y-0');
+          
+          setTimeout(function() {
+            // Simulated destination redirect
+            window.location.hash = '#order-confirmed-ORD-1001';
+          }, 1800);
+        }, 900);
+      });
+    }
+
+    // Resend Push interaction feedback
+    var resendBtn = document.getElementById('resendPushBtn');
+    if (resendBtn) {
+      resendBtn.addEventListener('click', function() {
+        var origText = resendBtn.innerHTML;
+        resendBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">done</span><span>Push Dispatched to HDFC Mobile App</span>';
+        setTimeout(function() {
+          resendBtn.innerHTML = origText;
+        }, 2500);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

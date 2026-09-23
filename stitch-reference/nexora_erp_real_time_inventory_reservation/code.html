@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Inventory</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full gap-space-md">
+<!-- Operational Context Header Bar -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-7 h-7 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Concurrency Engine</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase font-semibold">Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block">Zero-Oversell Atomic Locks</span>
+</div>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 bg-surface-container rounded-lg shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">1.2ms SLA</span>
+</div>
+</div>
+<!-- Search & Contextual Active Filters -->
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-8 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:bg-surface-container" readonly="" type="text" value="IP17-256-BLK"/>
+<span class="material-symbols-outlined absolute right-2.5 text-on-surface-variant text-[16px]">qr_code_scanner</span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto py-0.5 no-scrollbar">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded shrink-0">
+<span class="material-symbols-outlined text-secondary text-[14px]">warehouse</span>
+<span class="font-label-sm text-label-sm text-on-surface">Mumbai Central (WH-04)</span>
+</div>
+<div class="flex items-center gap-1 bg-error-container/60 px-2 py-1 rounded shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm text-on-error-container font-medium">Critical: 1 Left</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Batch: #NX-2025</span>
+</div>
+</div>
+</div>
+<!-- Visual Hero Banner (Product Identity) -->
+<div class="relative w-full h-32 rounded-xl overflow-hidden shadow-sm flex items-end p-space-md">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Futuristic high-tech smartphone flagship device iPhone resting on a sleek dark metallic pedestal in an automated distribution fulfillment warehouse, illuminated by dramatic blue and cool white precision lighting, hyper realistic 8k enterprise technology aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqzsx-Dhq5sOaiRxhevCRZg869SuyTaXMTtzlJqCty1mlqDHlqJvR5_YO179Z4EWiK2htnWqcMtSfwPrwYabrLHlx9XHcJDhtn_tezcTMVBCtIiG_51MAMhSxdh40m1suMjMyc340Q8zZC0_kziA2t-sBTHssKm7U2_r1qsfUi15lhyxXZkiN2nPG_fRmgKsmUYuYj3OuYLja37kJ-PB9ItbsgUBIlovRVbPSgZBwN2t0H5YGeaQ2y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/70 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold uppercase tracking-wider">High Velocity</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">SKU: IP17-256-BLK</span>
+</div>
+<div class="font-headline-md text-headline-md text-surface-container-lowest font-semibold truncate mt-0.5">iPhone 17 (256GB - Obsidian)</div>
+</div>
+<div class="text-right shrink-0 bg-primary-container/80 backdrop-blur-md px-2.5 py-1 rounded-lg">
+<div class="font-label-sm text-label-sm text-on-primary-container uppercase">Demanded</div>
+<div class="font-label-lg text-label-lg text-tertiary-fixed font-bold">300 Req</div>
+</div>
+</div>
+</div>
+<!-- Core Demo Visualizer Box -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-md">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Atomic Reservation Isolation</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">bolt</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">300 simultaneous checkout threads evaluated</p>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface font-mono">Tx: #940381</span>
+</div>
+<!-- State Transition Flow Micro-Diagram -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant px-1">
+<span>Concurrency Funnel</span>
+<span class="text-tertiary-fixed-dim font-bold">1 Winner : 299 Queued</span>
+</div>
+<!-- Interactive Visualizer Strip -->
+<div class="relative w-full h-6 bg-surface-container rounded-lg overflow-hidden flex items-center px-1.5">
+<div class="absolute left-0 top-0 bottom-0 w-[4%] bg-tertiary-fixed-dim z-10 transition-all duration-700"></div>
+<div class="absolute left-[4%] top-0 bottom-0 w-[96%] bg-error-container/40 z-0"></div>
+<div class="relative z-20 flex justify-between w-full items-center text-[10px] font-mono px-1">
+<span class="font-bold text-on-tertiary-fixed font-label-sm">LOCK 1</span>
+<span class="text-error font-medium font-label-sm">299 THREADS DIVERTED TO WAITLIST</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant text-[11px] px-1 font-body-sm">
+<span>Pool: 1 Unit</span>
+<span class="text-on-surface font-semibold">Latency: 0.84ms</span>
+</div>
+</div>
+<!-- 4-Stat High Density Metrics Grid -->
+<div class="grid grid-cols-4 gap-space-xs">
+<!-- Total -->
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Total</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">1</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Units</span>
+</div>
+<!-- Available (Transitioned) -->
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center justify-center text-center relative overflow-hidden">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Available</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="font-label-sm text-label-sm text-outline line-through">1</span>
+<span class="material-symbols-outlined text-[12px] text-error">arrow_forward</span>
+<span class="font-headline-md text-headline-md text-error font-bold">0</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-medium mt-0.5">Depleted</span>
+</div>
+<!-- Reserved (Locked) -->
+<div class="bg-surface-container p-2 rounded-lg flex flex-col items-center justify-center text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2 h-2 bg-secondary rounded-bl"></div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Reserved</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold mt-0.5">1</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono mt-0.5">RES-1001</span>
+</div>
+<!-- Sold -->
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sold</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-0.5">0</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Pending</span>
+</div>
+</div>
+<!-- Funnel Outcome Status -->
+<div class="flex items-center justify-between bg-surface-container p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">verified</span>
+<span class="font-label-lg text-label-lg text-on-surface">1 Successfully Reserved</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest px-2 py-0.5 rounded text-error font-medium">299 Blocked / Waitlisted</span>
+</div>
+</div>
+<!-- Real-Time Concurrency Guardrail Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield_lock</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-1.5">
+          Atomic Lock Engaged
+          <span class="px-1.5 py-0.2 bg-surface-container text-on-surface text-[10px] font-mono rounded">MEM-LOCK-V2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+          299 overselling attempts prevented by Nexora concurrency engine. Zero oversold orders. Zero duplicate reservations.
+        </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface">Over-allocation Risk: 0.0%</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[16px]">fingerprint</span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">Hash: 8f2c...4a19</span>
+</div>
+</div>
+</div>
+<!-- Active Reservation Card ( Rahul Sharma ) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-md text-label-md text-on-surface font-semibold">RES-1001</span>
+<span class="font-label-sm text-label-sm text-outline">Session: #SES-982</span>
+</div>
+<!-- Expiration Badge with Amber Pulse -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container/40">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-md text-label-md text-on-error-container font-semibold" id="reservation-timer">09:42</span>
+</div>
+</div>
+<!-- Customer Identity Snapshot -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary-container text-surface-container-lowest flex items-center justify-center font-label-lg font-bold shrink-0">
+          RS
+        </div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Rahul Sharma</span>
+<span class="material-symbols-outlined text-secondary text-[14px]">verified_user</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate block">Direct App Client • Bandra Hub</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intent Score</span>
+<span class="font-label-lg text-label-lg text-on-tertiary-container font-bold">94 / 100</span>
+</div>
+</div>
+<!-- Unit Details Mini-Strip -->
+<div class="flex items-center justify-between py-1 px-0.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">smartphone</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">iPhone 17 (256GB Black)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">IMEI Locked</span>
+</div>
+<!-- Action Trigger CTA -->
+<div class="flex flex-col gap-space-xs pt-1">
+<button class="w-full h-11 bg-primary hover:bg-primary-container active:scale-[0.99] transition-all rounded-lg flex items-center justify-center gap-2 text-on-primary shadow-sm" onclick="showNotification()">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span class="font-label-lg text-label-lg tracking-wide">Proceed to Payment Gate</span>
+</button>
+<button class="w-full h-9 bg-transparent hover:bg-surface-container rounded-lg flex items-center justify-center gap-1 text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span class="font-label-sm text-label-sm">Inspect Cryptographic Audit Trace</span>
+</button>
+</div>
+</div>
+<!-- Real-Time Inventory Movement Table (Today) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">sync_alt</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Movement Ledger</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Today (UTC+05:30)</span>
+</div>
+<div class="grid grid-cols-4 gap-space-xs text-center py-2 bg-surface-container-low rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Received</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold mt-0.5">0</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Reserved</span>
+<span class="font-label-lg text-label-lg text-secondary font-bold mt-0.5">+1</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Released</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold mt-0.5">0</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sold</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold mt-0.5">0</span>
+</div>
+</div>
+<!-- Micro-Timeline Stream of Events -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/60">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Thread #882: Lock RES-1001 Granted</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono shrink-0">14:28:02</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/60">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2 h-2 rounded-full bg-error shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">299 Threads Diverted to Waitlist</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono shrink-0">14:28:03</span>
+</div>
+</div>
+</div>
+<!-- Bottom Visualizer Footnote -->
+<div class="flex items-center justify-center gap-1.5 py-space-xs text-on-surface-variant text-center">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="font-label-sm text-label-sm">Nexora Distributed In-Memory State Grid • Verified</span>
+</div>
+</div>
+<script>
+  // Countdown Timer Simulation for 09:42 badge
+  (function() {
+    let totalSeconds = 9 * 60 + 42;
+    const timerElem = document.getElementById('reservation-timer');
+    if (timerElem) {
+      setInterval(() => {
+        if (totalSeconds > 0) {
+          totalSeconds--;
+          const minutes = Math.floor(totalSeconds / 60);
+          const seconds = totalSeconds % 60;
+          timerElem.textContent = 
+            String(minutes).padStart(2, '0') + ':' + 
+            String(seconds).padStart(2, '0');
+        }
+      }, 1000);
+    }
+  })();
+
+  function showNotification() {
+    alert('Routing Reservation RES-1001 to Enterprise Payment Gateway...');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

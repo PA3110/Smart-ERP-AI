@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script>
+<title>Vivek ERP — Admin Console</title>
+<style>
+  body{min-height:100vh;}
+  .navlink{display:flex;align-items:center;gap:.5rem;padding:.6rem .9rem;border-radius:.5rem;color:#44474c;font-size:13px;font-weight:500;cursor:pointer;}
+  .navlink.active{background:#000;color:#fff;}
+  .navlink:hover:not(.active){background:#e5eeff;}
+  .view{display:none;} .view.active{display:block;}
+  ::-webkit-scrollbar{width:8px;height:8px;} ::-webkit-scrollbar-thumb{background:#c5c6cd;border-radius:4px;}
+</style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+
+<div class="flex min-h-screen">
+  <aside class="w-64 shrink-0 bg-surface-container-lowest border-r border-outline-variant/40 flex flex-col p-space-md gap-1 fixed h-screen">
+    <div class="flex items-center gap-2 mb-space-md px-1">
+      <div class="h-9 w-9 rounded-md bg-primary flex items-center justify-center font-headline-md text-headline-md text-on-primary">V</div>
+      <div class="flex flex-col leading-none">
+        <span class="font-label-lg text-label-lg text-on-surface">Vivek ERP</span>
+        <span class="font-label-sm text-label-sm text-on-tertiary-container">Admin Console</span>
+      </div>
+    </div>
+    <div class="navlink" data-view="dashboard"><span class="material-symbols-outlined text-[18px]">dashboard</span> Dashboard</div>
+    <div class="navlink" data-view="inventory"><span class="material-symbols-outlined text-[18px]">warehouse</span> Inventory &amp; Warehouses</div>
+    <div class="navlink" data-view="reservations"><span class="material-symbols-outlined text-[18px]">lock_clock</span> Reservations &amp; Queue</div>
+    <div class="navlink" data-view="ai"><span class="material-symbols-outlined text-[18px]">psychology</span> Demand AI</div>
+    <div class="navlink" data-view="orders"><span class="material-symbols-outlined text-[18px]">local_shipping</span> Orders</div>
+    <div class="navlink" data-view="customers"><span class="material-symbols-outlined text-[18px]">groups</span> Customers (CRM)</div>
+    <div class="navlink" data-view="loadtest"><span class="material-symbols-outlined text-[18px]">bolt</span> Load Test</div>
+    <div class="mt-auto pt-space-md border-t border-outline-variant/40">
+      <a href="/" class="navlink"><span class="material-symbols-outlined text-[18px]">storefront</span> View storefront</a>
+    </div>
+  </aside>
+
+  <div class="flex-1 ml-64 flex flex-col">
+    <header class="h-16 border-b border-outline-variant/40 bg-surface-container-lowest/80 backdrop-blur flex items-center justify-between px-space-lg sticky top-0 z-10">
+      <div class="flex items-center gap-2">
+        <label class="font-label-sm text-label-sm text-on-surface-variant">Product:</label>
+        <select id="product-select" class="h-9 px-2 rounded-lg border border-outline-variant font-label-md text-label-md"></select>
+      </div>
+      <span id="conn-status" class="font-label-sm text-label-sm text-on-tertiary-container">● Live</span>
+    </header>
+    <main class="flex-1 p-space-lg">
+
+      <div class="view" id="view-dashboard"></div>
+      <div class="view" id="view-inventory"></div>
+      <div class="view" id="view-reservations"></div>
+      <div class="view" id="view-ai"></div>
+      <div class="view" id="view-orders"></div>
+      <div class="view" id="view-customers"></div>
+      <div class="view" id="view-loadtest"></div>
+
+    </main>
+  </div>
+</div>
+
+<script src="/admin/app.js"></script>
+</body>
+</html>

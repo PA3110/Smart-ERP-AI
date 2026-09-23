@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Dashboard</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-10 space-y-space-md">
+<!-- Breadcrumb Path -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Admin</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors">Access Control</span>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold whitespace-nowrap">User Management &amp; Role Permissions</span>
+</div>
+<!-- Page Header & Live Security Pill -->
+<div class="flex flex-col gap-space-xs bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Access Control</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-ping"></span>
+            RBAC ENFORCED • 2FA REQUIRED
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Zero-trust cryptographic identities &amp; real-time granular session orchestration.</p>
+</div>
+<div class="shrink-0 text-right">
+<span class="font-label-md text-label-md text-secondary font-semibold block">42 ACCOUNTS</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container block">5 Active Sessions</span>
+</div>
+</div>
+</div>
+<!-- Security HUD / Governance Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Super Admins</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">admin_panel_settings</span>
+</div>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HW Key</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">MFA Hardware Token</span>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-on-tertiary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Sessions</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">sensors</span>
+</div>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface">5 Live</span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container truncate">0 Anomalous • Clean</span>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-surface-tint"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Policy Version</span>
+<span class="material-symbols-outlined text-[16px] text-surface-tint">verified_user</span>
+</div>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-semibold">RBAC-v4.8</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Synced 14m ago</span>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-on-tertiary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Failed Auth (24h)</span>
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">shield</span>
+</div>
+<div class="mt-1 flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lockouts</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Zero Brute-force</span>
+</div>
+</div>
+<!-- Role Scope Horizontal Filter Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 -mx-margin-mobile px-margin-mobile scrollbar-none">
+<button class="h-8 px-3 rounded-full bg-primary text-on-primary font-label-sm text-label-sm whitespace-nowrap shadow-sm flex items-center gap-1 shrink-0">
+<span>All Roles</span>
+<span class="bg-surface-container-lowest/20 px-1.5 py-0.2 rounded-full text-on-primary">42</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap shrink-0 transition-colors flex items-center gap-1">
+<span>Admin &amp; SecOps</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.2 rounded-full text-on-surface font-semibold">3</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap shrink-0 transition-colors flex items-center gap-1">
+<span>Warehouse &amp; Ops</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.2 rounded-full text-on-surface font-semibold">18</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap shrink-0 transition-colors flex items-center gap-1">
+<span>Sales &amp; CRM</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.2 rounded-full text-on-surface font-semibold">12</span>
+</button>
+<button class="h-8 px-3 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap shrink-0 transition-colors flex items-center gap-1">
+<span>Carriers &amp; 3PL</span>
+<span class="bg-surface-container-lowest px-1.5 py-0.2 rounded-full text-on-surface font-semibold">9</span>
+</button>
+</div>
+<!-- Search & Action Filters Bar -->
+<div class="flex items-center gap-space-xs">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant text-[18px]">search</span>
+<input class="w-full h-11 pl-9 pr-3 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-low shadow-sm" placeholder="Search user, role, email, or node ID..." type="text"/>
+</div>
+<button class="h-11 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="hidden sm:inline">Filters</span>
+</button>
+<button class="h-11 px-3 rounded-lg bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-sm shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Add</span>
+</button>
+</div>
+<!-- User Roster Cards Stream -->
+<div class="flex flex-col space-y-space-sm">
+<!-- Card 1: Vikram Malhotra (Super Admin - Current) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-lg object-cover" data-alt="Professional headshot of Vikram Malhotra, an Indian male senior technical operations director in his late thirties wearing executive navy blazer, ambient corporate tech office lighting with glass partitions and soft blue rim lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtFCqO13lA-Rsf9ud4Axu1kUXB51PAH9pl9L257pqHFdIWRBmXA0ZZDTcr4yaLr5H31CzmshCL7dRJ_e-YjODFHM-gWh1cS2GF7y6b6Fmoy1r3nuvl7BwYU5npbHa0WwEFOAQeka6xVLalR727GnMDfu0-WAUlJtuyVp32Wk9qJ1G9Dv141VpcfmvE53MllYY7Hs1aeIYJhEC8I8gdVwILAG0eII6n-FLMRGTpMfojsMNmqkAWv1FZ"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Vikram Malhotra</span>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm tracking-wider uppercase font-semibold">SUPER ADMIN</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">v.malhotra@nexora.internal</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-1.5 py-0.2 rounded">USR-001</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Live Session Context Strip -->
+<div class="mt-space-sm p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container shrink-0">fiber_manual_record</span>
+<span class="font-label-sm text-label-sm truncate">This Device • IP: 10.14.2.8 (BLR HQ Node)</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">key</span>
+<span class="font-label-sm text-label-sm">FIDO2 / YubiKey 5C</span>
+</div>
+</div>
+<!-- Permissions Grant Scope -->
+<div class="mt-space-xs flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Raft Cluster Root</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Memory Dump</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Financial Overrides</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Key Rotation</span>
+</div>
+<!-- Quick Action Drawer Triggers -->
+<div class="mt-space-sm pt-2 flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last Auth: 14m ago</span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Session Logs</button>
+<button class="h-8 px-2.5 rounded bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm transition-colors">Edit Policy</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Ravi Kumar (Warehouse Lead) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-lg object-cover" data-alt="Warehouse operations leader Ravi Kumar, professional portrait in high-visibility reflective work vest over uniform, industrial automated fulfillment center backdrop with barcode scanners and smart warehouse shelving" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7B6sjvuiyoSmuDCfcyrSpQlzqAmBBauim075RnXqtnbaqLcY1ATQKF65y3taYC7AvhOX1eqNT8iuvNuM3qMJkG8o3uGsYcOqRR7_mTjfH8aglio_3tmTeeyg50HxrIBqk85PoVF37OojHdKolxPg1NfOnSPviElZAD8l5xN6rUxmmjR8Zzo5pDMLoIkGOBNA96gB0WBajwUO1bregqw-xOVV1FxQTk3Wfqielq5HnyGLZGPHRK4aU"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Ravi Kumar</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold uppercase">WAREHOUSE LEAD</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">ravi.k@hub-south.nexora.in</span>
+<span class="font-label-sm text-label-sm text-outline font-label-sm">TC57-BLR-09</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Live Session Context Strip -->
+<div class="mt-space-sm p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container shrink-0">dock</span>
+<span class="font-label-sm text-label-sm truncate">Active Session • Station 4 (Bay Pick &amp; Pack)</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">fingerprint</span>
+<span class="font-label-sm text-label-sm">Biometric FIDO</span>
+</div>
+</div>
+<!-- Permissions Grant Scope -->
+<div class="mt-space-xs flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-label-sm">HW Bind: #NX-88390</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Tare Scale Verify</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Outbound Dispatch</span>
+</div>
+<!-- Quick Action Drawer Triggers -->
+<div class="mt-space-sm pt-2 flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-tertiary-container">Authenticated • Shift 2</span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-2.5 rounded bg-error-container hover:bg-error/20 text-on-error-container font-label-sm text-label-sm transition-colors">Revoke Device</button>
+<button class="h-8 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Audit Trail</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Rahul Sharma (Sales Manager) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-lg object-cover" data-alt="Portrait of Rahul Sharma, South Asian tech sales enterprise executive, sharp grey knit polo, smiling confidently in a modern glass boardroom with natural daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU0F2-MJMAvu7j-vJLZp96vGNHlzEOedpVoxP4Cen6o5IuKJTrR-7dmAALAmFn2lu6SQ7zxY-iX1h7BBhpUNyjgRT5LIOw5ZAjEbcOWwcb_q21AxO1vSfat1dARz9k-4dXMxZe9AWH8VFqLF4XVGwSb5CAqaOcEQz5K9LdbwgO8pYLmjRi78nZQQQdeD42D_bo_9cFha_tjs9tOJdSgqJCXU46dcXMMB1vXuPFg58xe83nB8uWLn2d"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Rahul Sharma</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase">SALES MANAGER</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">r.sharma@sales.nexora.in</span>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-fixed px-1.5 py-0.2 rounded">USR-108</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Live Session Context Strip -->
+<div class="mt-space-sm p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">smartphone</span>
+<span class="font-label-sm text-label-sm truncate">Mobile Client • iOS 18.2 (Secure Enclave)</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-surface-tint">phonelink_lock</span>
+<span class="font-label-sm text-label-sm">TOTP Authenticator</span>
+</div>
+</div>
+<!-- Permissions Grant Scope -->
+<div class="mt-space-xs flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">VIP Reservation Overrides</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Lead Allocation</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Quotation Sign-off</span>
+</div>
+<!-- Quick Action Drawer Triggers -->
+<div class="mt-space-sm pt-2 flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Policy: Sales-Tier-A</span>
+<button class="h-8 px-3 rounded bg-secondary hover:bg-on-secondary-container text-on-secondary font-label-sm text-label-sm transition-colors">Configure Scope</button>
+</div>
+</div>
+<!-- Card 4: Suresh K. (Carrier Dispatcher) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-secondary font-headline-md text-headline-md">
+            SK
+          </div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Suresh K.</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-label-sm font-semibold uppercase">CARRIER DISPATCHER</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">suresh.k@porter.nexora.partner</span>
+<span class="font-label-sm text-label-sm text-outline font-label-sm">PARTNER-4491</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Live Session Context Strip -->
+<div class="mt-space-sm p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-outline shrink-0">schedule</span>
+<span class="font-label-sm text-label-sm truncate">Idle • Fleet Gateway KA-01</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">sms</span>
+<span class="font-label-sm text-label-sm">SMS OTP + Biometric</span>
+</div>
+</div>
+<!-- Permissions Grant Scope -->
+<div class="mt-space-xs flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Hyperlocal Detour Acceptance</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Biometric Handshake</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Telematics Ingestion</span>
+</div>
+<!-- Quick Action Drawer Triggers -->
+<div class="mt-space-sm pt-2 flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">KYC Validity: 28d left</span>
+<button class="h-8 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Re-verify KYC</button>
+</div>
+</div>
+<!-- Card 5: Service Worker / Autonomous Agent -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-lg bg-primary-container flex items-center justify-center shrink-0 text-tertiary-fixed font-headline-md text-headline-md">
+<span class="material-symbols-outlined text-[24px]">smart_toy</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Nexora ML Mitigator</span>
+<span class="px-2 py-0.5 rounded bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm font-semibold uppercase">SYSTEM BOT</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm text-secondary font-label-sm truncate">AGENT-DISPATCH-BLR-09</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-tertiary-fixed px-1.5 py-0.2 rounded font-semibold">Daemon Active</span>
+</div>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+<!-- Live Session Context Strip -->
+<div class="mt-space-sm p-2 rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container shrink-0">sync_alt</span>
+<span class="font-label-sm text-label-sm truncate">Autonomous Traffic Reroute Engine</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm">Ed25519 Cert</span>
+</div>
+</div>
+<!-- Permissions Grant Scope -->
+<div class="mt-space-xs flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Read-Only Telematics</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Quorum Broadcast</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Zero-Velocity Mitigation</span>
+</div>
+<!-- Quick Action Drawer Triggers -->
+<div class="mt-space-sm pt-2 flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-label-sm">Fingerprint: 8a:f1:2e:9c</span>
+<button class="h-8 px-3 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">Inspect Daemon</button>
+</div>
+</div>
+</div>
+<!-- Role Permission Preset Definitions (Collapsible Guide) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between cursor-pointer" id="togglePresetsBtn">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+<span class="font-headline-md text-headline-md text-on-surface">Standard Role Presets</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200" id="togglePresetsIcon">expand_more</span>
+</div>
+<div class="mt-space-sm space-y-space-xs" id="presetsList">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Super Admin (L4)</span>
+<span class="font-label-sm text-label-sm text-secondary">Global Scope</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full cluster quorum voting, WAL log export, user lifecycle lifecycle governance, cryptographic ledger append.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Warehouse Operator (L2)</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container">Floor Hub Scope</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Barcode/RFID scan commit, optical tare scale validation, bay allocation, manifest sign-off.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Sales Executive (L2)</span>
+<span class="font-label-sm text-label-sm text-secondary">Commercial Scope</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time inventory hold, waitlist priority push, quote generation, discount authorization cap 15%.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Logistics Partner (L1)</span>
+<span class="font-label-sm text-label-sm text-outline">Partner Bound</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Last-mile GPS breadcrumb feed, smart seal OTP handshakes, ePOD digital signature capture.</p>
+</div>
+</div>
+</div>
+<!-- Security Audit & Governance Global Actions -->
+<div class="flex flex-col space-y-space-xs pt-space-xs">
+<button class="w-full h-12 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined text-[20px]">person_add_alt</span>
+<span>Invite New Enterprise User</span>
+</button>
+<button class="w-full h-11 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">policy</span>
+<span>Export RBAC Matrix &amp; SOC-2 Type II Review</span>
+</button>
+<button class="w-full h-10 rounded-lg bg-surface-container-lowest hover:bg-error-container text-error font-label-sm text-label-sm flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span>Global Emergency Session Revoke (Break-Glass)</span>
+</button>
+</div>
+<!-- Compliance Trust Footer Seal -->
+<div class="flex items-center justify-center gap-1.5 pt-space-xs text-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">verified</span>
+<span class="font-label-sm text-label-sm">SOC-2 Type II &amp; ISO-27001 Access Certification Active • Zero-Trust Perimeter</span>
+</div>
+</div>
+<script>
+  (function() {
+    var toggleBtn = document.getElementById('togglePresetsBtn');
+    var presetsList = document.getElementById('presetsList');
+    var toggleIcon = document.getElementById('togglePresetsIcon');
+
+    if (toggleBtn && presetsList && toggleIcon) {
+      toggleBtn.addEventListener('click', function() {
+        var isHidden = presetsList.classList.toggle('hidden');
+        if (isHidden) {
+          toggleIcon.style.transform = 'rotate(-90deg)';
+        } else {
+          toggleIcon.style.transform = 'rotate(0deg)';
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

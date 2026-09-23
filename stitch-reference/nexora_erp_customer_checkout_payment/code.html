@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Demand Ai</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- Urgent Atomic Reservation Banner -->
+<div class="w-full bg-primary-container text-on-primary rounded-xl p-space-md shadow-md relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-secondary/15 blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed-dim opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-tertiary-fixed-dim"></span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-surface-container-highest">Atomic Stock Locked</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-lowest/10">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">verified_user</span>
+<span class="font-label-sm text-label-sm text-surface-container-highest">Ledger #4092</span>
+</div>
+</div>
+<!-- Countdown Timer Core -->
+<div class="mt-space-md flex items-baseline justify-between relative z-10">
+<div>
+<span class="font-body-sm text-body-sm text-on-primary-container block">Reservation Window Expires In</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">timer</span>
+<span class="font-label-md text-[22px] font-bold tracking-tight text-white" id="reservation-timer">08:42</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim bg-tertiary-fixed-dim/10 px-1.5 py-0.5 rounded">HOLD ACTIVE</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-primary-container block">Reserved Unit</span>
+<span class="font-label-md text-label-md text-white">1 of 1 (Priority)</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-lowest/15 h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full rounded-full transition-all duration-1000" id="reservation-progress" style="width: 72%;"></div>
+</div>
+<p class="mt-2.5 font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+      Guaranteed allocation for <span class="text-white font-medium">Rahul Sharma</span>. If unpaid within this window, stock automatically returns to global inventory pool.
+    </p>
+</div>
+<!-- Identifier Badges Strip -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">receipt_long</span>
+<div class="truncate">
+<span class="block font-label-sm text-label-sm text-on-surface-variant leading-none">ORDER ID</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">ORD-1001</span>
+</div>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded active:bg-surface-container" onclick="navigator.clipboard.writeText('ORD-1001')" title="Copy Order ID">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">lock</span>
+<div class="truncate">
+<span class="block font-label-sm text-label-sm text-on-surface-variant leading-none">LOCK TOKEN</span>
+<span class="font-label-md text-label-md text-on-tertiary-container font-semibold truncate">RES-1001</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim shrink-0" title="Active Lease"></span>
+</div>
+</div>
+<!-- Product & Price Breakdown Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<!-- Item Mini Card -->
+<div class="flex items-center gap-space-md bg-surface-container-low p-space-sm rounded-lg">
+<div class="w-14 h-14 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center shrink-0 p-1">
+<img class="w-full h-full object-contain rounded" data-alt="Minimalist studio product shot of the sleek black flagship iPhone 17 smartphone on a crisp reflective slate background, dramatic soft rim lighting, ultra sharp high-end technology showcase with deep navy accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaS5pZY6XW5t8d5pmO0ISypXSphN1E20EmdOCN4Deq7jU1VpALiWUq7rtGoNiwN1x6QO4EOe46ZTlPQ0zzohy94P80cKKIuggaHtG5P95hJwm4_mDTyVC4prryN_gjOyoJDPI-UNXe5-LhgMFLDsxj2--73OZNAYM23gTFcy4huNU7e2ITh46608Dm4RcrdRtWjrOL8wxHtyUzF3q5FjaxayUvBSqUF-eaR3G7ZrcrTIGpdeOQR92Z"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-1 rounded">SKU: IP17-256-BLK</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Ready to Ship</span>
+</div>
+<span class="font-body-md text-body-md font-semibold text-on-surface block truncate mt-0.5">iPhone 17 (256GB Black)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Qty: 1 Unit • Serial: #NX-88390-A</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">₹79,999</span>
+</div>
+</div>
+<!-- Line Item Breakdown -->
+<div class="space-y-2 pt-1">
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Base Device Price</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">₹67,795.76</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Integrated GST (18%)</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">₹12,203.24</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+          Atomic Stock Lock Fee
+          <span class="material-symbols-outlined text-[14px] text-secondary">info</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">₹0 (Waived)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Express Insured Transit</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-medium">FREE</span>
+</div>
+<div class="h-px bg-surface-container my-1"></div>
+<div class="flex justify-between items-baseline pt-1">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Total Payable</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Inclusive of all duties &amp; taxes</span>
+</div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-secondary">₹79,999</span>
+</div>
+</div>
+<!-- Assurance Tag -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">verified</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block">Zero Overselling Guarantee</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight block">Stock locked in ERP Memory Grid for Rahul Sharma.</span>
+</div>
+</div>
+</div>
+<!-- Payment Methods Accordion Section -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface text-[20px]">account_balance_wallet</span>
+<span class="font-headline-md text-headline-md text-on-surface">Select Payment Method</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-secondary px-2 py-0.5 rounded font-medium">Instant Sync</span>
+</div>
+<!-- Payment Options Group -->
+<div class="space-y-space-xs" id="payment-options">
+<!-- 1. UPI (Active State) -->
+<div class="rounded-lg bg-surface-container-low p-space-sm cursor-pointer transition-all duration-200" id="option-upi" onclick="selectPaymentMethod('upi')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<div class="w-2 h-2 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-semibold text-on-surface">UPI / Instant VPA</span>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-1.5 py-0.2 rounded">Fastest</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Zero Fee</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_less</span>
+</div>
+</div>
+<!-- UPI Sub-details & Apps -->
+<div class="mt-space-md space-y-space-sm" id="upi-details">
+<!-- Supported Apps Icons -->
+<div class="grid grid-cols-4 gap-2">
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-secondary text-[22px]">phone_android</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1">GPay</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-secondary text-[22px]">contactless</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1">PhonePe</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-secondary text-[22px]">wallet</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1">Paytm</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">qr_code_2</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1">QR Scan</span>
+</button>
+</div>
+<!-- Verified VPA Field -->
+<div class="space-y-1 mt-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Enter Virtual Payment Address (VPA)</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 bg-surface-container-lowest text-on-surface font-label-md text-label-md px-3 pr-24 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/30" type="text" value="rahul@okhdfcbank"/>
+<div class="absolute right-2 flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Verified</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant px-0.5">
+<span>Primary account: HDFC Bank ••••4012</span>
+<button class="font-label-sm text-label-sm text-secondary hover:underline">Change</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Credit / Debit Cards -->
+<div class="rounded-lg bg-surface-container-lowest p-space-sm hover:bg-surface-container-low cursor-pointer transition-colors" id="option-card" onclick="selectPaymentMethod('card')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div>
+<span class="font-body-md text-body-md font-medium text-on-surface block">Credit or Debit Card</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Visa, Mastercard, RuPay, Amex</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- 3. Net Banking -->
+<div class="rounded-lg bg-surface-container-lowest p-space-sm hover:bg-surface-container-low cursor-pointer transition-colors" id="option-nb" onclick="selectPaymentMethod('nb')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div>
+<span class="font-body-md text-body-md font-medium text-on-surface block">Net Banking</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HDFC, ICICI, SBI, Axis &amp; 40+ banks</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">chevron_right</span>
+</div>
+</div>
+<!-- 4. Enterprise Credit (Disabled / Info) -->
+<div class="rounded-lg bg-surface-container p-space-sm opacity-60 cursor-not-allowed">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">corporate_fare</span>
+<div>
+<span class="font-body-md text-body-md font-medium text-on-surface block">Enterprise Credit Line</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Requires Corporate B2B Account Login</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface-variant">B2B Only</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-Time Concurrency State Monitor -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Ledger Handshake Monitor</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-tertiary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+        Zero Contention
+      </span>
+</div>
+<!-- Visual Stepper / Handshake State -->
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock_clock</span>
+<span class="block font-label-sm text-label-sm font-semibold text-on-surface mt-1">1. Stock Locked</span>
+<span class="font-label-sm text-[9px] text-on-tertiary-container">100% Confirmed</span>
+</div>
+<div class="bg-secondary/10 p-2 rounded-lg text-center">
+<span class="material-symbols-outlined text-secondary text-[18px] animate-bounce">sync_saved_locally</span>
+<span class="block font-label-sm text-label-sm font-semibold text-secondary mt-1">2. Handshake</span>
+<span class="font-label-sm text-[9px] text-secondary">Awaiting Auth</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center opacity-70">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">fact_check</span>
+<span class="block font-label-sm text-label-sm font-semibold text-on-surface-variant mt-1">3. Auto Release</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant">Instant Dispatch</span>
+</div>
+</div>
+<!-- Live Guarantee Disclaimer -->
+<div class="mt-2 bg-surface-container-low/70 p-2 rounded text-body-sm font-body-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0">shield</span>
+<span class="text-[11px] leading-tight">If payment fails or drops, reservation remains locked until <span class="font-medium text-on-surface">08:42</span>. Retries will not lose stock place.</span>
+</div>
+</div>
+<!-- Primary Action Deck -->
+<div class="space-y-space-sm pt-2">
+<button class="w-full h-12 bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary font-label-lg text-label-lg rounded-lg shadow-md flex items-center justify-between px-space-md transition-all" id="submit-payment-btn" onclick="executePaymentFlow()">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span>Pay ₹79,999 via UPI</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm opacity-80">Instant Verification</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</button>
+<!-- Release Stock Secondary Button -->
+<div class="text-center">
+<button class="text-on-surface-variant hover:text-error active:opacity-80 font-body-sm text-body-sm py-2 px-3 inline-flex items-center gap-1.5 transition-colors" onclick="confirmStockRelease()">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Cancel Reservation &amp; Release Stock Early</span>
+</button>
+</div>
+</div>
+<!-- Security Audit Footer -->
+<div class="pt-2 text-center space-y-1">
+<div class="flex items-center justify-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="font-label-sm text-label-sm">Secured by Nexora Concurrency Engine</span>
+</div>
+<p class="font-label-sm text-[10px] text-on-surface-variant/80">
+      256-bit Bank Grade Encryption • ISO/IEC 27001 Certified • Real-Time Inventory Sync
+    </p>
+</div>
+</div>
+<script>
+  // Countdown Timer Logic
+  (function() {
+    let totalSeconds = 8 * 60 + 42; // 08:42
+    const timerDisplay = document.getElementById('reservation-timer');
+    const progressBar = document.getElementById('reservation-progress');
+    const initialSeconds = 10 * 60; // 10 minutes basis
+
+    const interval = setInterval(function() {
+      if (totalSeconds <= 0) {
+        clearInterval(interval);
+        if (timerDisplay) timerDisplay.textContent = "00:00 EXPIRED";
+        if (progressBar) progressBar.style.width = "0%";
+        alert("Stock Reservation Expired. Returning stock back to ERP global inventory.");
+        return;
+      }
+      totalSeconds--;
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      const formatted = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+      if (timerDisplay) timerDisplay.textContent = formatted;
+      if (progressBar) {
+        const pct = Math.max(0, (totalSeconds / initialSeconds) * 100);
+        progressBar.style.width = pct + '%';
+      }
+    }, 1000);
+  })();
+
+  // Payment Method Selection Toggle
+  function selectPaymentMethod(method) {
+    const upiCard = document.getElementById('option-upi');
+    const upiDetails = document.getElementById('upi-details');
+    const submitBtn = document.getElementById('submit-payment-btn');
+
+    if (method === 'upi') {
+      if (upiDetails) upiDetails.classList.remove('hidden');
+      if (submitBtn) {
+        submitBtn.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[20px]">lock</span>
+            <span>Pay ₹79,999 via UPI</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="font-label-sm text-label-sm opacity-80">Instant Verification</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </div>
+        `;
+      }
+    } else {
+      if (upiDetails) upiDetails.classList.add('hidden');
+      const label = method === 'card' ? 'Credit/Debit Card' : 'Net Banking';
+      if (submitBtn) {
+        submitBtn.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[20px]">credit_card</span>
+            <span>Pay ₹79,999 via ${label}</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="font-label-sm text-label-sm opacity-80">Redirecting</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </div>
+        `;
+      }
+    }
+  }
+
+  // Payment Execution Simulator
+  function executePaymentFlow() {
+    const submitBtn = document.getElementById('submit-payment-btn');
+    if (!submitBtn) return;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <div class="flex items-center gap-2 w-full justify-center">
+        <span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span>
+        <span>Securing Ledger Lock & Confirming Transaction...</span>
+      </div>
+    `;
+
+    setTimeout(function() {
+      submitBtn.classList.remove('bg-primary');
+      submitBtn.classList.add('bg-tertiary-container', 'text-tertiary-fixed-dim');
+      submitBtn.innerHTML = `
+        <div class="flex items-center gap-2 w-full justify-center">
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span>Payment Successful • Order #ORD-1001 Confirmed!</span>
+        </div>
+      `;
+    }, 1800);
+  }
+
+  // Stock Cancellation Prompt
+  function confirmStockRelease() {
+    if (confirm("Are you sure you want to release this reservation? Your locked iPhone 17 (256GB Black) will instantly be offered to the next waitlisted customer.")) {
+      window.location.reload();
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

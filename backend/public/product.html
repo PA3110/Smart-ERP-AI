@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script>
+<title>Vivek Mart — Product</title>
+<style>body{min-height:max(884px,100dvh);}</style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased">
+
+<header class="fixed top-0 w-full z-40 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.06)]">
+  <div class="px-gutter-mobile py-space-sm flex items-center gap-space-sm">
+    <a href="/" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">arrow_back</span></a>
+    <span class="font-label-lg text-label-lg text-on-surface truncate">Vivek Mart</span>
+  </div>
+</header>
+
+<main class="flex-1 flex flex-col w-full pt-20 pb-32 bg-surface px-margin-mobile" id="main">
+  <div class="text-center py-space-lg font-label-md text-label-md text-on-surface-variant">Loading…</div>
+</main>
+
+<div id="buybar" class="fixed bottom-0 w-full z-40 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.08)] p-space-md hidden">
+  <button id="btn-buy" class="w-full bg-primary text-on-primary rounded-lg py-space-md font-label-lg text-label-lg flex items-center justify-center gap-1.5">
+    <span class="material-symbols-outlined text-[18px]">bolt</span> Buy Now
+  </button>
+</div>
+
+<script>
+function getIdentity() { try { return JSON.parse(localStorage.getItem('vivekCustomer')); } catch { return null; } }
+function stars(rating) { const full = Math.round(rating || 0); return '★'.repeat(full) + '☆'.repeat(5 - full); }
+const params = new URLSearchParams(location.search);
+const productId = params.get('id');
+let product = null;
+
+async function load() {
+  const res = await fetch('/storefront/products/' + productId);
+  if (!res.ok) { document.getElementById('main').innerHTML = '<div class="text-center py-space-lg">Product not found</div>'; return; }
+  product = await res.json();
+  render();
+}
+
+function render() {
+  const p = product;
+  document.getElementById('main').innerHTML = `
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col items-center gap-space-sm mb-space-md">
+      <div class="text-8xl">${p.emoji || '🛒'}</div>
+    </div>
+    <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">${p.name}</h1>
+    <span class="font-label-sm text-label-sm text-on-tertiary-container mt-1">${stars(p.rating)} <span class="text-on-surface-variant">(${(p.review_count||0).toLocaleString('en-IN')} ratings)</span></span>
+    <div class="flex items-baseline gap-2 mt-space-sm">
+      <span class="font-headline-lg text-headline-lg font-bold text-on-surface">₹${p.unit_price.toLocaleString('en-IN')}</span>
+      ${p.mrp ? `<span class="font-body-md text-body-md text-on-surface-variant line-through">₹${p.mrp.toLocaleString('en-IN')}</span>` : ''}
+      ${p.discountPct ? `<span class="font-label-lg text-label-lg text-on-tertiary-container font-semibold">${p.discountPct}% off</span>` : ''}
+    </div>
+    ${p.is_flash_deal ? `
+      <div class="w-full bg-error-container rounded-lg p-space-sm mt-space-md flex items-center gap-2">
+        <span class="material-symbols-outlined text-error text-[20px]">bolt</span>
+        <span class="font-label-lg text-label-lg text-on-error-container">${p.available > 0 ? p.available + ' left at this price — ' + (p.demand.queueSize) + ' people waiting' : 'Sold out — join the waitlist below'}</span>
+      </div>
+    ` : `<div class="font-label-md text-label-md text-on-tertiary-container mt-space-sm">In stock · ships in 2-3 days</div>`}
+    <p class="font-body-md text-body-md text-on-surface-variant mt-space-md">${p.description || ''}</p>
+  `;
+  document.getElementById('buybar').classList.remove('hidden');
+  document.getElementById('btn-buy').textContent = p.available > 0 ? 'Buy Now' : 'Join Waitlist';
+}
+
+async function buyNow() {
+  const id = getIdentity();
+  if (!id) { alert('Please sign in first (tap the person icon on the home page).'); location.href = '/'; return; }
+  const btn = document.getElementById('btn-buy');
+  btn.disabled = true; btn.textContent = 'Processing…';
+  const idempotencyKey = 'buy-' + productId + '-' + id.name + '-' + Date.now();
+  const res = await fetch('/flash-sale/buy-now', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ productId: Number(productId), customerName: id.name, customerCity: id.city, qty: 1, idempotencyKey })
+  });
+  const data = await res.json();
+  if (data.type === 'reserved') {
+    location.href = '/order.html?reservationId=' + data.reservation.id;
+  } else if (data.type === 'queued') {
+    location.href = '/order.html?queueEntryId=' + data.queueEntry.id;
+  } else {
+    alert(data.error || 'Something went wrong. Please try again.');
+    btn.disabled = false; btn.textContent = 'Buy Now';
+  }
+}
+document.getElementById('btn-buy').addEventListener('click', buyNow);
+
+load();
+setInterval(load, 5000);
+</script>
+</body>
+</html>

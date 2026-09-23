@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Dashboard</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- Breadcrumbs & Live Protocol Bar -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-1.5 overflow-x-auto text-label-sm font-label-sm text-on-surface-variant">
+<span class="hover:text-secondary cursor-pointer">Sales</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-secondary cursor-pointer">VIP Queue</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="bg-surface-container-high px-1.5 py-0.5 rounded text-on-surface font-label-sm">IP17-256-BLK</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold">Simulation Engine</span>
+</div>
+<!-- Live Raft Status Strip -->
+<div class="flex items-center justify-between bg-primary-container text-on-primary-container px-space-md py-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-primary font-medium tracking-wide">RAFT POLICY HOT-RELOAD: POL-SALES-2025-08</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm">
+<span class="text-secondary-fixed">Term 412</span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary-fixed">Commit #18.9M</span>
+<span class="text-outline-variant">•</span>
+<span class="text-tertiary-fixed-dim font-bold">0.68ms</span>
+</div>
+</div>
+</div>
+<!-- SKU & Physical Stock Health Bento -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex gap-space-sm">
+<div class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[28px]">smartphone</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded">SKU: IP17-256-BLK</span>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-1.5 py-0.5 rounded flex items-center gap-1 font-semibold">
+<span class="w-1 h-1 rounded-full bg-error animate-pulse"></span>CRITICAL STOCK
+            </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate mt-0.5">Apple iPhone 17 Pro</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">256GB Space Black • Hub South (Bay 04)</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">Base M.R.P.</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹1,34,900</span>
+</div>
+</div>
+<!-- Cluster Gauge Strip -->
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Available</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-error font-bold" id="avail-counter">1</span>
+<span class="font-label-sm text-label-sm text-error">Unit left</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded mt-1.5 overflow-hidden">
+<div class="bg-error w-1/2 h-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Locked Orders</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ORD-1001</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded mt-1.5 overflow-hidden">
+<div class="bg-secondary w-full h-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">High-Intent Waitlist</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-secondary font-bold">18</span>
+<span class="font-label-sm text-label-sm text-secondary">Queue</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded mt-1.5 overflow-hidden">
+<div class="bg-secondary-container w-3/4 h-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- VIP Requester & Escrow Authorization Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span class="font-label-lg text-label-lg text-on-surface">Target Allocation Client</span>
+</div>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Tier-1 Elite</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center font-label-lg text-secondary font-bold">MN</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Meera Nair</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Chief Innovation Officer • Apex Quantum</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">LTV Portfolio</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">₹84.50 Lakh</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs text-body-sm">
+<div class="bg-surface-container p-space-xs rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Business Case</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium mt-0.5">Emergency Summit Replacement</span>
+</div>
+<div class="bg-surface-container p-space-xs rounded flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Escrow Verification</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-container font-semibold mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Pre-auth ₹1,34,900
+        </span>
+</div>
+</div>
+</div>
+<!-- Live Policy Guardrail Enforcement Checks -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Guardrail Policy Checks</span>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-2 py-0.5 rounded font-mono">POL-SALES-2025-08</span>
+</div>
+<!-- Check Matrix -->
+<div class="space-y-space-xs">
+<!-- Check 1 -->
+<div class="flex items-start justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Daily High-Demand Allocation Cap</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Quota: Consuming slot #2 of 3 per 24h rolling window</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-lowest px-2 py-0.5 rounded font-medium">PASS</span>
+</div>
+<!-- Check 2 -->
+<div class="flex items-start justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">timer</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Atomic Hold Duration (TTL)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">15-minute lease armed. Unfulfilled stock yields back.</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest px-2 py-0.5 rounded font-mono">15:00 TTL</span>
+</div>
+<!-- Check 3 -->
+<div class="flex items-start justify-between p-space-sm bg-surface-container-high rounded-lg transition-all duration-300" id="check-dual-sign">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 animate-spin" id="dual-sign-icon">sync</span>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface">Dual Sign-Off Guard</span>
+<span class="font-label-sm text-label-sm text-error bg-surface-container-lowest px-1 rounded">&lt;2 Units Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="dual-sign-text">Awaiting Ops Hub Co-sign (Vikram M. / Ananya Rao)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest px-2 py-0.5 rounded font-bold" id="dual-sign-badge">PENDING</span>
+</div>
+<!-- Check 4 -->
+<div class="flex items-start justify-between p-space-sm bg-surface-container-low rounded-lg transition-all duration-300" id="check-biometric">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5" id="biometric-icon">lock</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Sales Biometric Re-auth</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="biometric-text">Target device: USR-108 iPhone 16 Pro (SES-99201)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded" id="biometric-badge">IDLE</span>
+</div>
+</div>
+</div>
+<!-- Interactive Action & Simulation Control Deck -->
+<div class="flex flex-col space-y-space-xs">
+<!-- Primary Trigger -->
+<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 active:bg-primary-container shadow-sm transition-all" id="btn-primary-auth" onclick="runPrimaryAuth()">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+<span id="btn-primary-label">Authenticate FaceID &amp; Trigger Ops Co-Sign</span>
+</button>
+<!-- Secondary Demo Simulation Trigger -->
+<button class="w-full h-10 bg-secondary-container text-on-secondary-container rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 opacity-50 cursor-not-allowed transition-all" disabled="" id="btn-sim-ops" onclick="simulateOpsApproval()">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Simulate Ops Instant Co-Sign Approval</span>
+</button>
+<!-- Cancel / Abort Action -->
+<button class="w-full h-9 bg-transparent text-error rounded-xl font-label-sm text-label-sm flex items-center justify-center gap-1 hover:bg-error-container/20 transition-all" onclick="abortSimulation()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Abort Override &amp; Yield to Waitlist #1</span>
+</button>
+</div>
+<!-- Consensus Audit & Telemetry Terminal Drawer -->
+<div class="bg-primary-container text-on-primary rounded-xl p-space-md flex flex-col space-y-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">terminal</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-semibold tracking-wider uppercase">Consensus Telemetry</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-mono">SOC-2 VERIFIED</span>
+</div>
+<!-- Telemetry Log Window -->
+<div class="bg-primary rounded p-space-xs font-label-sm text-label-sm font-mono space-y-1 overflow-y-auto max-h-24 text-outline-variant" id="telemetry-log">
+<div class="flex items-center gap-1.5 text-on-primary">
+<span class="text-tertiary-fixed-dim">&gt;</span>
+<span>Node-01 [Leader] Quorum valid across 5 cluster nodes.</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-secondary-fixed">&gt;</span>
+<span>Guardrail POL-SALES-2025-08 compiled at 14:02:18 IST.</span>
+</div>
+<div class="flex items-center gap-1.5" id="log-cursor">
+<span class="text-tertiary-fixed-dim animate-pulse">&gt;</span>
+<span class="text-on-surface-variant">Listening for hardware cryptographic handshake...</span>
+</div>
+</div>
+<!-- Ledger Stamp -->
+<div class="flex items-center justify-between pt-1 font-label-sm text-label-sm text-on-primary-container border-t-0">
+<span class="truncate max-w-[200px] font-mono">SHA256: 0x9c3f1b...882a</span>
+<span class="font-mono">Vault #9021</span>
+</div>
+</div>
+</div>
+<script>
+  let step = 0;
+
+  function appendLog(msg, colorClass = 'text-on-primary') {
+    const log = document.getElementById('telemetry-log');
+    const cursor = document.getElementById('log-cursor');
+    const entry = document.createElement('div');
+    entry.className = `flex items-center gap-1.5 ${colorClass}`;
+    entry.innerHTML = `<span class="text-tertiary-fixed-dim">&gt;</span><span>${msg}</span>`;
+    log.insertBefore(entry, cursor);
+    log.scrollTop = log.scrollHeight;
+  }
+
+  function runPrimaryAuth() {
+    if (step === 0) {
+      const btn = document.getElementById('btn-primary-auth');
+      const label = document.getElementById('btn-primary-label');
+      label.innerText = 'Scanning FaceID (SES-99201)...';
+      btn.classList.add('opacity-80');
+
+      setTimeout(() => {
+        // Biometric passed
+        step = 1;
+        document.getElementById('biometric-icon').innerText = 'check_circle';
+        document.getElementById('biometric-icon').className = 'material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5';
+        document.getElementById('biometric-badge').className = 'font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-lowest px-2 py-0.5 rounded font-bold';
+        document.getElementById('biometric-badge').innerText = 'VERIFIED';
+        document.getElementById('biometric-text').innerText = 'Hardware Secure Enclave Sign: Valid (USR-108)';
+
+        label.innerText = 'Multicasting Raft RPC to Ops Co-Signers...';
+        appendLog('FaceID signed via SES-99201 Secure Enclave. Biometric hash registered.', 'text-tertiary-fixed-dim');
+        appendLog('Broadcasting dual-sign proposal to Ops Hub South nodes...', 'text-secondary-fixed');
+
+        // Enable Ops bypass button
+        const simBtn = document.getElementById('btn-sim-ops');
+        simBtn.disabled = false;
+        simBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        simBtn.classList.add('hover:bg-secondary-fixed');
+
+        label.innerText = 'Waiting for Ops Manager Co-Signature...';
+      }, 900);
+    }
+  }
+
+  function simulateOpsApproval() {
+    if (step >= 1) {
+      const dualSignIcon = document.getElementById('dual-sign-icon');
+      const dualSignBadge = document.getElementById('dual-sign-badge');
+      const dualSignText = document.getElementById('dual-sign-text');
+      const checkDual = document.getElementById('check-dual-sign');
+
+      dualSignIcon.innerText = 'check_circle';
+      dualSignIcon.className = 'material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5';
+      dualSignBadge.className = 'font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-lowest px-2 py-0.5 rounded font-bold';
+      dualSignBadge.innerText = 'CO-SIGNED';
+      dualSignText.innerText = 'Approved by Vikram M. (Ops Lead - Hub South)';
+
+      checkDual.className = 'flex items-start justify-between p-space-sm bg-surface-container rounded-lg';
+
+      appendLog('Ops Co-Sign received: USR-OPS-402 (Vikram M.) validated.', 'text-tertiary-fixed-dim');
+      appendLog('Commit Block #18,922,017 broadcasted. Stock locked to Meera Nair.', 'text-tertiary-fixed-dim');
+
+      // Update primary button to confirmed state
+      const btn = document.getElementById('btn-primary-auth');
+      const label = document.getElementById('btn-primary-label');
+      label.innerText = 'Allocation Verified & Locked (15m Lease)';
+      btn.className = 'w-full h-12 bg-on-tertiary-container text-on-tertiary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm pointer-events-none';
+
+      // Disable sim button
+      const simBtn = document.getElementById('btn-sim-ops');
+      simBtn.disabled = true;
+      simBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+      // Decrement Available visual
+      document.getElementById('avail-counter').innerText = '0';
+      document.getElementById('avail-counter').className = 'font-headline-md text-headline-md text-on-surface-variant font-bold';
+    }
+  }
+
+  function abortSimulation() {
+    appendLog('Simulation aborted by user. Quorum release broadcast sent.', 'text-error');
+    const label = document.getElementById('btn-primary-label');
+    label.innerText = 'Allocation Released. Ready.';
+    setTimeout(() => {
+      window.location.reload();
+    }, 700);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  vivek-erp:
+    build: .
+    container_name: vivek-erp-system
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - DB_FILE=/app/data/erp.db
+      - JWT_SECRET=${JWT_SECRET:-change_this_to_a_long_random_secret}
+      - JWT_EXPIRES_IN=8h
+      - CORS_ORIGIN=*
+    volumes:
+      - vivek_erp_data:/app/data
+
+volumes:
+  vivek_erp_data:

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Procure</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full gap-space-md">
+<!-- Stock Depletion Warning & Demand Snapshot Banner -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden p-space-md flex flex-col gap-space-sm relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">inventory_2</span>
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider">Stock Depleted • Critical Urgency</span>
+</div>
+<div class="bg-error-container text-on-error-container px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm font-semibold">SKU: IP17-256-BLK</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-0.5">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">iPhone 17 Space Black</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">256GB Enterprise Tier • Primary Depot</p>
+</div>
+<span class="bg-surface-container-high text-on-surface px-space-xs py-0.5 rounded font-label-md text-label-md">0 In Stock</span>
+</div>
+<!-- Inventory Allocation Mini-Telemetry -->
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<div class="bg-surface-container-low rounded-lg p-space-xs text-center">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Available</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-error font-semibold">0</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-xs text-center">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Reserved</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold">0</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-xs text-center">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Sold (Last Batch)</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-tertiary-container font-semibold">1</span>
+</div>
+</div>
+<!-- Aggregate Demand Metric Ribbon -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total Waitlist</span>
+<span class="font-label-lg text-label-lg text-on-surface">428 <span class="text-on-surface-variant font-normal">Registered</span></span>
+</div>
+<div class="w-px h-6 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">High-Intent Leads</span>
+<span class="font-label-lg text-label-lg text-secondary">186 <span class="text-on-surface-variant font-normal">Active</span></span>
+</div>
+<div class="w-px h-6 bg-outline-variant/30"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unmet Pipeline GMV</span>
+<span class="font-label-lg text-label-lg text-on-tertiary-container font-semibold">₹3.42 Cr</span>
+</div>
+</div>
+</section>
+<!-- AI Procurement Reorder Recommendation -->
+<section class="bg-primary-container text-on-primary rounded-xl shadow-md p-space-md relative overflow-hidden flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-[16px]">auto_awesome</span>
+</div>
+<span class="font-label-lg text-label-lg tracking-wide uppercase text-secondary-fixed">Demand AI • Recommended Reorder</span>
+</div>
+<span class="bg-surface-container-lowest/15 px-space-xs py-0.5 rounded text-secondary-fixed font-label-sm text-label-sm">High Confidence 99.4%</span>
+</div>
+<!-- PO Details Box -->
+<div class="bg-surface-container-lowest/10 rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-body-sm text-body-sm text-primary-fixed-dim">Target Procurement Quantity</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-white font-bold" id="orderQtyDisplay">500 Units</span>
+</div>
+<div class="flex items-center justify-between text-primary-fixed-dim font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">local_shipping</span> Apple Authorized Enterprise Logistics</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 3 Days Lead Time</span>
+</div>
+</div>
+<!-- AI Reasoning Engine Note -->
+<div class="bg-surface-container-lowest/5 rounded-lg p-space-sm flex gap-space-xs items-start">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">neurology</span>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim leading-relaxed">
+<span class="text-white font-medium">Algorithmic Justification:</span> High-intent cohort (186 users) combined with viral waitlist (428 users) projects immediate depot turnover of 500 units within 4.2 hours of dock arrival.
+      </p>
+</div>
+<!-- Governance Guardrail Banner -->
+<div class="bg-surface-container-lowest/10 rounded-lg p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-semibold uppercase tracking-wider">Human Governance Protocol Active</span>
+<span class="font-body-sm text-body-sm text-on-primary-container leading-tight">AI recommends replenishment velocity; consequential inventory orders require verified authorized role signature.</span>
+</div>
+</div>
+<!-- PO Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-1" id="actionPanel">
+<button class="w-full h-11 bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-sm hover:opacity-95 active:scale-[0.99] transition-all" id="btnApprove" onclick="handleApprovePO()">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span>Approve &amp; Submit PO (500 units)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="w-full h-9 bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-white rounded font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="toggleModifySheet()">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Modify Quantity</span>
+</button>
+<button class="w-full h-9 bg-surface-container-lowest/10 hover:bg-error/30 text-primary-fixed-dim hover:text-error-container rounded font-label-md text-label-md flex items-center justify-center gap-1 transition-colors" onclick="handleRejectPO()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Decline Reorder</span>
+</button>
+</div>
+</div>
+<!-- Interactive Verification Seal Output (Revealed upon approval) -->
+<div class="hidden bg-tertiary-container text-on-tertiary rounded-lg p-space-sm flex-col gap-1 transition-all duration-300" id="verificationSeal">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span class="font-label-sm text-label-sm uppercase font-semibold">PO #NX-9428-PO Cryptographically Dispatched</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Status: PENDING SUPPLIER</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-tertiary-container flex justify-between pt-1">
+<span>Signer: EMP-8821 (Lead Manager)</span>
+<span>Hash: 0x9b4a...e71c</span>
+</div>
+</div>
+</section>
+<!-- Smart Waitlist Priority Queue -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">format_list_numbered</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Demand Waitlist Priority Queue</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded">Real-time Ranking</span>
+</div>
+<!-- Lead Row 1: The Converted Purchase -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-on-tertiary-container"></div>
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">#1</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Rahul Sharma</span>
+<span class="bg-surface-container text-on-surface px-1 rounded font-label-sm text-label-sm">B2B Corp</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Allocated &amp; Order Finalized • Unit #001</span>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end">
+<span class="bg-surface-container-high text-on-tertiary-container px-space-xs py-0.5 rounded font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Converted
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">10:41 AM</span>
+</div>
+</div>
+<!-- Lead Row 2: Top Unmet High-Intent Lead -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">#2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Priya Patel</span>
+<span class="bg-surface-container text-secondary font-semibold px-1 rounded font-label-sm text-label-sm">High Priority</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Joined Today • 4 Purchase Attempts</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<div class="bg-secondary-container/30 text-on-secondary-fixed px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">bolt</span>
+<span class="font-label-md text-label-md font-bold">Intent 91/100</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Target: 2 Units</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low rounded p-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">phone_iphone</span>
+<span>Payment Pre-Authorized (Escrow Active)</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center">
+          Notify Direct <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Lead Row 3: Cart Abort / High Signal Lead -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm flex flex-col gap-space-xs shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-container"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">#3</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Amit Verma</span>
+<span class="bg-surface-container text-on-surface-variant px-1 rounded font-label-sm text-label-sm">High Priority</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Joined Today • Cart Abort at Out of Stock</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<div class="bg-secondary-container/20 text-on-secondary-fixed px-space-xs py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">speed</span>
+<span class="font-label-md text-label-md font-bold">Intent 88/100</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Target: 1 Unit</span>
+</div>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low rounded p-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">notifications_active</span>
+<span>Subscribed via SMS &amp; WhatsApp Alert</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center">
+          Priority Lock <span class="material-symbols-outlined text-[14px]">lock</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Atomic ERP Event Audit Chain -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface text-[18px]">receipt_long</span>
+<h4 class="font-label-lg text-label-lg text-on-surface">Immutable Event Ledger</h4>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Block Sequence</span>
+</div>
+<!-- Timeline Event Chain -->
+<div class="flex flex-col gap-space-xs relative">
+<!-- Step 1 -->
+<div class="flex gap-space-xs items-start">
+<div class="flex flex-col items-center shrink-0 w-5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container mt-1"></span>
+<div class="w-0.5 h-7 bg-outline-variant/30"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Stock Decrement to 0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:41:02 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Order #NX-8109 fulfilled. Depleted allocation reservoir.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-space-xs items-start">
+<div class="flex flex-col items-center shrink-0 w-5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary mt-1"></span>
+<div class="w-0.5 h-7 bg-outline-variant/30"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Demand AI Synthesis Triggered</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:41:03 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Queue telemetry processed 428 waitlist signatures.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-space-xs items-start">
+<div class="flex flex-col items-center shrink-0 w-5">
+<span class="w-2.5 h-2.5 rounded-full bg-error mt-1 animate-pulse"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-error font-semibold">Governance Guardrail Pending</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Present</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Awaiting executive role signature for PO batch commit.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Quantity Customization Sheet (Toggleable) -->
+<div class="hidden bg-surface-container-high rounded-xl p-space-sm flex items-center justify-between gap-space-sm animate-fadeIn" id="qtySheet">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Adjust PO Volume</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Multiples of 50 units</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-highest" onclick="adjustQty(-50)">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-label-md text-label-md font-bold px-2 text-on-surface" id="customQty">500</span>
+<button class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-highest" onclick="adjustQty(50)">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="ml-1 bg-secondary text-on-secondary px-2.5 py-1 rounded font-label-sm text-label-sm" onclick="saveQty()">Save</button>
+</div>
+</div>
+</div>
+<script>
+  let currentQuantity = 500;
+
+  function toggleModifySheet() {
+    const sheet = document.getElementById('qtySheet');
+    if (sheet.classList.contains('hidden')) {
+      sheet.classList.remove('hidden');
+    } else {
+      sheet.classList.add('hidden');
+    }
+  }
+
+  function adjustQty(delta) {
+    currentQuantity = Math.max(50, currentQuantity + delta);
+    document.getElementById('customQty').innerText = currentQuantity;
+  }
+
+  function saveQty() {
+    document.getElementById('orderQtyDisplay').innerText = currentQuantity + ' Units';
+    document.getElementById('btnApprove').innerHTML = `<span class="material-symbols-outlined text-[18px]">draw</span><span>Approve & Submit PO (` + currentQuantity + ` units)</span>`;
+    document.getElementById('qtySheet').classList.add('hidden');
+  }
+
+  function handleApprovePO() {
+    const panel = document.getElementById('actionPanel');
+    const seal = document.getElementById('verificationSeal');
+    panel.style.display = 'none';
+    seal.classList.remove('hidden');
+    seal.classList.add('flex');
+  }
+
+  function handleRejectPO() {
+    const btn = document.getElementById('btnApprove');
+    btn.disabled = true;
+    btn.classList.add('opacity-50', 'pointer-events-none');
+    alert('Reorder recommendation archived. Demand backfill postponed.');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>

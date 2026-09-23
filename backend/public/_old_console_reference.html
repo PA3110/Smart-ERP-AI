@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<title>Vivek ERP — Reservation Console</title>
+<style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script>
+<style>body { min-height: max(884px, 100dvh); }</style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+<header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]">
+  <div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs">
+    <div class="flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm min-w-0">
+        <div class="h-8 w-8 rounded-md bg-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">bolt</span>
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Vivek ERP</span>
+          <div class="flex items-center gap-1.5 mt-0.5">
+            <span id="conn-dot" class="w-1.5 h-1.5 rounded-full bg-error shrink-0"></span>
+            <span id="conn-label" class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Connecting…</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-space-xs shrink-0">
+        <button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+        </button>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5">
+      <div class="min-w-0 flex items-center gap-1.5">
+        <span class="font-headline-md text-headline-md text-on-surface truncate">Reservations</span>
+      </div>
+      <span class="h-7 px-space-sm bg-surface-container rounded flex items-center gap-1 shrink-0 font-label-sm text-label-sm text-on-surface-variant">Inventory Manager</span>
+    </div>
+  </div>
+</header>
+
+<main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile">
+  <div class="flex flex-col w-full space-y-space-md">
+
+    <div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-xs rounded-xl shadow-sm">
+      <div class="flex items-center gap-space-xs min-w-0">
+        <span class="material-symbols-outlined text-[18px] text-secondary">lock</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Concurrency Engine</span>
+      </div>
+      <span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container text-tertiary-fixed-dim font-semibold">ACTIVE</span>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col space-y-space-md">
+      <div class="flex items-start justify-between gap-2">
+        <div class="flex flex-col">
+          <h3 id="hero-name" class="font-headline-md text-headline-md text-on-surface font-semibold">—</h3>
+          <span id="hero-sku" class="font-label-md text-label-md text-on-surface-variant">SKU: —</span>
+        </div>
+        <div class="flex flex-col items-end shrink-0">
+          <span id="hero-risk" class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> —
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+        <div class="flex flex-col items-center justify-center p-space-xs bg-surface-container-lowest rounded shadow-sm">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Total</span>
+          <span id="stat-total" class="font-headline-md text-headline-md font-bold text-on-surface">0</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-space-xs bg-surface-container-lowest rounded shadow-sm">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Available</span>
+          <span id="stat-available" class="font-headline-md text-headline-md font-bold text-error">0</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-space-xs bg-surface-container-lowest rounded shadow-sm">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Reserved</span>
+          <span id="stat-reserved" class="font-headline-md text-headline-md font-bold text-secondary">0</span>
+        </div>
+        <div class="flex flex-col items-center justify-center p-space-xs bg-surface-container-lowest rounded shadow-sm">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Sold</span>
+          <span id="stat-sold" class="font-headline-md text-headline-md font-bold text-on-tertiary-container">0</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5 px-space-xs">
+        <span class="material-symbols-outlined text-[16px] text-on-surface-variant">groups</span>
+        <span id="stat-queue-label" class="font-label-sm text-label-sm text-on-surface-variant truncate">0 waiting in queue</span>
+      </div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col space-y-space-sm">
+      <div class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[18px] text-secondary">bolt</span>
+        <span class="font-label-lg text-label-lg text-on-surface">Simulate Flash Sale</span>
+      </div>
+      <div class="grid grid-cols-3 gap-space-sm">
+        <label class="flex flex-col gap-0.5">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Stock</span>
+          <input id="in-stock" type="number" value="10" class="h-9 px-2 rounded-lg border border-outline-variant font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary"/>
+        </label>
+        <label class="flex flex-col gap-0.5">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Buyers</span>
+          <input id="in-customers" type="number" value="100" class="h-9 px-2 rounded-lg border border-outline-variant font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary"/>
+        </label>
+        <label class="flex flex-col gap-0.5">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Window (s)</span>
+          <input id="in-seconds" type="number" value="20" class="h-9 px-2 rounded-lg border border-outline-variant font-label-md text-label-md focus:outline-none focus:ring-1 focus:ring-secondary"/>
+        </label>
+      </div>
+      <button id="btn-simulate" class="w-full bg-primary text-on-primary rounded-lg py-space-sm font-label-lg text-label-lg flex items-center justify-center gap-1.5 active:scale-[0.98] transition-all">
+        <span class="material-symbols-outlined text-[18px]">verified</span> Run Simulation
+      </button>
+      <button id="btn-reset" class="w-full bg-surface-container text-on-surface-variant rounded-lg py-2 font-label-sm text-label-sm flex items-center justify-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px]">restart_alt</span> Reset demo (keep stock size)
+      </button>
+    </div>
+
+    <!-- Warehouse network -->
+    <div class="flex items-center justify-between pt-space-sm">
+      <h4 class="font-headline-md text-headline-md text-on-surface flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[20px] text-secondary">warehouse</span> Warehouse Network
+      </h4>
+    </div>
+    <div id="warehouse-grid" class="grid grid-cols-2 gap-space-sm"></div>
+
+    <!-- Recent fulfilled orders with allocation reasoning -->
+    <div class="flex items-center justify-between pt-space-sm">
+      <h4 class="font-headline-md text-headline-md text-on-surface flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[20px] text-secondary">local_shipping</span> Recent Allocations
+      </h4>
+    </div>
+    <div id="orders-list" class="flex flex-col gap-space-sm"></div>
+
+    <div class="flex items-center justify-between">
+      <h4 class="font-headline-md text-headline-md text-on-surface">Active Reservations</h4>
+      <span id="res-count" class="font-label-sm text-label-sm text-on-surface-variant">0</span>
+    </div>
+    <div id="res-list" class="flex flex-col gap-space-sm"></div>
+
+    <div class="flex items-center justify-between pt-space-sm">
+      <h4 class="font-headline-md text-headline-md text-on-surface">Demand Waitlist Priority Queue</h4>
+      <span class="font-label-sm text-label-sm text-on-surface-variant">Real-time ranking</span>
+    </div>
+    <div id="queue-list" class="flex flex-col gap-space-sm"></div>
+
+    <!-- Demand AI -->
+    <div class="flex items-center justify-between pt-space-sm">
+      <h4 class="font-headline-md text-headline-md text-on-surface flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[20px] text-secondary">psychology</span> Demand AI
+      </h4>
+      <button id="btn-gen-insight" class="font-label-sm text-label-sm text-secondary px-2 py-1 rounded bg-surface-container">Refresh forecast</button>
+    </div>
+
+    <div class="grid grid-cols-2 gap-space-sm">
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md border-l-[3px] border-secondary">
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Current Demand</span>
+        <div id="ai-demand-hits" class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">—</div>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">purchase attempts</span>
+      </div>
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md border-l-[3px] border-error">
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Depletion Countdown</span>
+        <div id="ai-depletion" class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-error">—</div>
+        <span id="ai-burn-rate" class="font-label-sm text-label-sm text-on-surface-variant">burn rate —</span>
+      </div>
+    </div>
+
+    <div id="ai-card" class="bg-primary-container text-surface rounded-xl p-space-md shadow-md flex flex-col gap-space-sm hidden">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[18px] text-tertiary-fixed">bolt</span>
+          <span class="font-label-lg text-label-lg">AI Recommended Action</span>
+        </div>
+        <span id="ai-risk-badge" class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-error-container text-on-error-container">—</span>
+      </div>
+      <p class="font-body-md text-body-md text-surface-bright" id="ai-headline">—</p>
+      <ul id="ai-justification" class="font-label-sm text-label-sm text-primary-fixed-dim list-disc pl-4 space-y-0.5"></ul>
+      <div class="flex items-center gap-space-sm pt-space-xs" id="ai-actions">
+        <button onclick="decide('APPROVED')" class="flex-1 bg-surface-container-lowest text-on-surface rounded-lg py-2 font-label-sm text-label-sm font-semibold">Approve & Submit PO</button>
+        <button onclick="promptModify()" class="px-3 bg-surface-container-lowest/20 text-surface rounded-lg py-2 font-label-sm text-label-sm font-semibold">Modify</button>
+        <button onclick="decide('REJECTED')" class="px-3 bg-surface-container-lowest/20 text-surface rounded-lg py-2 font-label-sm text-label-sm font-semibold">Decline</button>
+      </div>
+      <div id="ai-decided" class="hidden font-label-sm text-label-sm text-tertiary-fixed-dim pt-space-xs"></div>
+    </div>
+
+    <div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col space-y-space-sm mt-space-sm">
+      <div class="flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[18px] text-on-surface-variant">receipt_long</span>
+        <span class="font-label-lg text-label-lg text-on-surface">Immutable Event Ledger</span>
+      </div>
+      <div id="ledger" class="flex flex-col divide-y divide-outline-variant/40"></div>
+    </div>
+
+  </div>
+</main>
+
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]">
+  <div class="flex items-center justify-around h-16 px-space-xs">
+    <a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-secondary" href="#">
+      <span class="material-symbols-outlined text-[22px]">lock_clock</span>
+      <span class="font-label-sm text-label-sm tracking-tight">Reservations</span>
+    </a>
+  </div>
+</nav>
+
+<script>
+const badgeColors = {
+  RESERVED: 'bg-secondary-container text-on-secondary-container',
+  PAYMENT_PENDING: 'bg-secondary-container text-on-secondary-container',
+  PAYMENT_SUCCESS: 'bg-tertiary-container text-tertiary-fixed-dim',
+  FULFILLED: 'bg-tertiary-container text-tertiary-fixed-dim',
+  PAYMENT_FAILED: 'bg-error-container text-on-error-container',
+  EXPIRED: 'bg-error-container text-on-error-container',
+  CANCELLED: 'bg-surface-container text-on-surface-variant',
+  WAITING: 'bg-surface-container-high text-on-surface-variant',
+};
+let productId = null;
+
+function badge(status) {
+  const cls = badgeColors[status] || 'bg-surface-container text-on-surface-variant';
+  return `<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold ${cls}">${status}</span>`;
+}
+const intentColors = { HIGH: 'bg-tertiary-container text-tertiary-fixed-dim', MEDIUM: 'bg-secondary-container text-on-secondary-container', LOW: 'bg-error-container text-on-error-container' };
+function intentBadge(intent) {
+  return `<span class="px-1.5 py-0.5 rounded font-label-sm text-label-sm font-semibold ${intentColors[intent]||''}">${intent} INTENT</span>`;
+}
+function timeLeft(iso) {
+  const ms = new Date(iso).getTime() - Date.now();
+  if (ms <= 0) return '0s';
+  return Math.ceil(ms/1000) + 's';
+}
+
+async function runSimulation() {
+  const stock = Number(document.getElementById('in-stock').value);
+  const customers = Number(document.getElementById('in-customers').value);
+  const reservationSeconds = Number(document.getElementById('in-seconds').value);
+  const r = await fetch('/flash-sale/simulate', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ productName: 'iPhone 17 Pro', sku: 'FLASH-DEMO-1', stock, customers, reservationSeconds })
+  });
+  const data = await r.json();
+  productId = data.product.id;
+  render(data.state);
+  generateInsight();
+}
+async function pay(id, outcome) {
+  await fetch(`/flash-sale/${id}/pay`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ outcome }) });
+  refresh();
+}
+async function cancel(id) {
+  await fetch(`/flash-sale/${id}/cancel`, { method:'POST' });
+  refresh();
+}
+async function refresh() {
+  if (!productId) return;
+  const r = await fetch(`/flash-sale/state/${productId}`);
+  render(await r.json());
+}
+
+function render(state) {
+  document.getElementById('conn-dot').classList.remove('bg-error');
+  document.getElementById('conn-dot').classList.add('bg-tertiary-fixed-dim');
+  document.getElementById('conn-label').textContent = 'Online • Sync Active';
+
+  document.getElementById('hero-name').textContent = state.product.name;
+  document.getElementById('hero-sku').textContent = 'SKU: ' + state.product.sku;
+  const s = state.stats;
+  document.getElementById('hero-risk').innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> ${s.available === 0 ? 'Critical Risk' : 'Nominal'}`;
+
+  document.getElementById('stat-total').textContent = s.totalStock;
+  document.getElementById('stat-available').textContent = s.available;
+  document.getElementById('stat-reserved').textContent = s.reserved;
+  document.getElementById('stat-sold').textContent = s.allocated;
+  document.getElementById('stat-queue-label').textContent = `${s.queueSize} waiting in queue`;
+
+  const activeReservations = state.reservations.filter(r => r.status === 'RESERVED' || r.status === 'PAYMENT_PENDING');
+  document.getElementById('res-count').textContent = activeReservations.length;
+  document.getElementById('res-list').innerHTML = activeReservations.slice(0, 25).map(r => `
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2 min-w-0">
+          <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 text-on-primary font-label-sm text-label-sm">${r.customer_name.slice(0,2).toUpperCase()}</div>
+          <div class="flex flex-col min-w-0">
+            <span class="font-label-lg text-label-lg text-on-surface truncate">${r.customer_name}</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">RES-${r.id} · ${r.customer_city || 'Unknown city'}</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-end gap-1">
+          ${badge(r.status)}
+          <span class="font-label-sm text-label-sm font-mono text-error">${timeLeft(r.expires_at)}</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-between">
+        ${intentBadge(r.intent || 'MEDIUM')}
+      </div>
+      <div class="flex gap-space-sm">
+        <button onclick="pay(${r.id},'success')" class="flex-1 bg-tertiary-container text-tertiary-fixed-dim rounded-lg py-2 font-label-sm text-label-sm font-semibold">Pay ✓ Success</button>
+        <button onclick="pay(${r.id},'fail')" class="flex-1 bg-error-container text-on-error-container rounded-lg py-2 font-label-sm text-label-sm font-semibold">Pay ✗ Fail</button>
+        <button onclick="cancel(${r.id})" class="px-3 bg-surface-container text-on-surface-variant rounded-lg py-2 font-label-sm text-label-sm font-semibold">Cancel</button>
+      </div>
+    </div>
+  `).join('') || `<div class="text-center text-on-surface-variant font-label-md text-label-md py-space-md">No active reservations</div>`;
+
+  const queue = state.queue.filter(q => q.status === 'WAITING').slice(0, 15);
+  document.getElementById('queue-list').innerHTML = queue.map((q, i) => `
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm min-w-0">
+        <div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 font-label-sm text-label-sm text-on-surface-variant font-bold">#${i+1}</div>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface truncate">${q.customer_name}</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Joined ${new Date(q.requested_at).toLocaleTimeString()}</span>
+        </div>
+      </div>
+      ${badge(q.status)}
+    </div>
+  `).join('') || `<div class="text-center text-on-surface-variant font-label-md text-label-md py-space-md">Queue is empty</div>`;
+
+  document.getElementById('warehouse-grid').innerHTML = (state.warehouseBreakdown || []).map(w => `
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-sm">
+      <div class="font-label-lg text-label-lg text-on-surface truncate">${w.warehouse_name}</div>
+      <div class="font-label-sm text-label-sm text-on-surface-variant">${w.city} · batch ${w.batch}</div>
+      <div class="flex items-baseline gap-1 mt-1">
+        <span class="font-headline-md text-headline-md font-bold ${w.available > 0 ? 'text-tertiary-fixed-dim' : 'text-error'}">${w.available}</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">available</span>
+      </div>
+    </div>
+  `).join('') || `<div class="col-span-2 text-center text-on-surface-variant font-label-md text-label-md py-space-md">No warehouse data yet — run a simulation</div>`;
+
+  document.getElementById('orders-list').innerHTML = (state.recentOrders || []).map(o => `
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-1">
+      <div class="flex items-center justify-between">
+        <span class="font-label-lg text-label-lg text-on-surface">${o.customer_name}</span>
+        <span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">${o.warehouse || '—'}</span>
+      </div>
+      <p class="font-label-sm text-label-sm text-on-surface-variant">${o.allocation_reason || ''}</p>
+    </div>
+  `).join('') || `<div class="text-center text-on-surface-variant font-label-md text-label-md py-space-md">No fulfilled orders yet</div>`;
+
+  document.getElementById('ledger').innerHTML = state.auditTrail.slice(0, 30).map(a => `
+    <div class="flex items-center justify-between py-1.5 gap-2">
+      <div class="flex items-center gap-1.5 min-w-0">
+        <span class="w-1.5 h-1.5 rounded-full ${a.event_type.includes('FAIL')||a.event_type==='EXPIRED'?'bg-error':(a.event_type.includes('SUCCESS')||a.event_type==='ORDER_ALLOCATED')?'bg-tertiary-fixed-dim':'bg-secondary'} shrink-0"></span>
+        <span class="font-label-md text-label-md text-on-surface truncate">${a.event_type} — ${a.entity_type} #${a.entity_id}</span>
+      </div>
+      <span class="font-label-sm text-label-sm font-mono text-on-surface-variant shrink-0">${(a.created_at||'').split(' ')[1] || a.created_at}</span>
+    </div>
+  `).join('') || `<div class="text-center text-on-surface-variant font-label-md text-label-md py-space-md">No events yet</div>`;
+}
+
+let currentInsight = null;
+
+async function generateInsight() {
+  if (!productId) return;
+  const r = await fetch(`/ai-insights/${productId}/generate`, { method: 'POST' });
+  currentInsight = await r.json();
+  renderInsight();
+}
+
+async function decide(decision, qty) {
+  if (!currentInsight) return;
+  const body = { decision };
+  if (qty) body.qty = qty;
+  const r = await fetch(`/ai-insights/${currentInsight.id}/decision`, {
+    method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body)
+  });
+  currentInsight = await r.json();
+  renderInsight();
+  refresh();
+}
+function promptModify() {
+  const qty = prompt('Enter approved reorder quantity:', currentInsight.recommended_reorder_qty);
+  if (qty && Number(qty) >= 0) decide('MODIFIED', Number(qty));
+}
+
+const riskColors = {
+  CRITICAL: 'bg-error-container text-on-error-container',
+  HIGH: 'bg-error-container text-on-error-container',
+  MEDIUM: 'bg-secondary-container text-on-secondary-container',
+  LOW: 'bg-tertiary-container text-tertiary-fixed-dim',
+};
+
+function renderInsight() {
+  if (!currentInsight) return;
+  document.getElementById('ai-demand-hits').textContent = currentInsight.demand_hits;
+  document.getElementById('ai-depletion').textContent = currentInsight.depletion_seconds == null ? '—' : (currentInsight.depletion_seconds <= 0 ? 'Depleted' : Math.round(currentInsight.depletion_seconds) + 's');
+  document.getElementById('ai-burn-rate').textContent = 'burn rate ' + currentInsight.burn_rate_per_sec.toFixed(2) + '/sec';
+
+  const card = document.getElementById('ai-card');
+  card.classList.remove('hidden');
+  const badge = document.getElementById('ai-risk-badge');
+  badge.textContent = currentInsight.stockout_risk + ' RISK';
+  badge.className = 'px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold ' + (riskColors[currentInsight.stockout_risk] || '');
+
+  document.getElementById('ai-headline').textContent =
+    `Recommend reordering ${currentInsight.recommended_reorder_qty} units. Stock-out risk is ${currentInsight.stockout_risk}.`;
+  document.getElementById('ai-justification').innerHTML = currentInsight.justification.map(j => `<li>${j}</li>`).join('');
+
+  const actions = document.getElementById('ai-actions');
+  const decided = document.getElementById('ai-decided');
+  if (currentInsight.status === 'PENDING') {
+    actions.classList.remove('hidden');
+    decided.classList.add('hidden');
+  } else {
+    actions.classList.add('hidden');
+    decided.classList.remove('hidden');
+    decided.textContent = `${currentInsight.status} — ${currentInsight.decided_qty ?? 0} units by ${currentInsight.decided_by || '—'} at ${currentInsight.decided_at || ''}`;
+  }
+}
+
+document.getElementById('btn-simulate').addEventListener('click', runSimulation);
+document.getElementById('btn-gen-insight').addEventListener('click', generateInsight);
+document.getElementById('btn-reset').addEventListener('click', async () => {
+  if (!productId) return;
+  const stock = Number(document.getElementById('in-stock').value);
+  const reservationSeconds = Number(document.getElementById('in-seconds').value);
+  const r = await fetch(`/flash-sale/${productId}/reset`, {
+    method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ stock, reservationSeconds })
+  });
+  const data = await r.json();
+  render(data.state);
+  currentInsight = null;
+});
+
+setInterval(() => {
+  if (productId) refresh();
+  if (productId && (!currentInsight || currentInsight.status !== 'PENDING')) generateInsight();
+}, 3000);
+</script>
+</body>
+</html>

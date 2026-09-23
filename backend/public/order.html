@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script>
+<title>Vivek Mart — Your Order</title>
+<style>body{min-height:max(884px,100dvh);}</style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased">
+
+<header class="fixed top-0 w-full z-40 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.06)]">
+  <div class="px-gutter-mobile py-space-sm flex items-center gap-space-sm">
+    <a href="/" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">arrow_back</span></a>
+    <span class="font-label-lg text-label-lg text-on-surface truncate">Your Order</span>
+  </div>
+</header>
+
+<main class="flex-1 flex flex-col w-full pt-20 pb-10 bg-surface px-margin-mobile" id="main">
+  <div class="text-center py-space-lg font-label-md text-label-md text-on-surface-variant">Loading…</div>
+</main>
+
+<script>
+const params = new URLSearchParams(location.search);
+let reservationId = params.get('reservationId');
+const queueEntryId = params.get('queueEntryId');
+let pollTimer = null;
+
+function timeLeft(iso) {
+  const ms = new Date(iso).getTime() - Date.now();
+  if (ms <= 0) return 0;
+  return Math.ceil(ms / 1000);
+}
+
+function renderQueued(entry) {
+  document.getElementById('main').innerHTML = `
+    <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col items-center gap-space-sm text-center">
+      <span class="material-symbols-outlined text-[48px] text-secondary">groups</span>
+      <h2 class="font-headline-md text-headline-md text-on-surface">You're in line</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant">${entry.product_name} sold out fast — you're waiting for the next unit to free up.</p>
+      <div class="font-headline-lg text-headline-lg font-bold text-secondary">#${entry.position}</div>
+      <span class="font-label-sm text-label-sm text-on-surface-variant">in queue · we'll auto-upgrade you the instant a slot opens</span>
+    </div>
+  `;
+}
+
+function renderReservation(r) {
+  const active = r.status === 'RESERVED' || r.status === 'PAYMENT_PENDING';
+  if (active) {
+    const secs = timeLeft(r.expires_at);
+    document.getElementById('main').innerHTML = `
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col items-center gap-space-sm text-center">
+        <div class="text-5xl">${r.emoji || '🛒'}</div>
+        <h2 class="font-headline-md text-headline-md text-on-surface">${r.product_name}</h2>
+        <span class="font-label-sm text-label-sm text-on-tertiary-container">Reserved for you — complete payment before the timer runs out</span>
+        <div class="font-headline-xl text-headline-xl font-bold text-error font-mono">${secs}s</div>
+        <div class="w-full flex flex-col gap-space-sm mt-space-md">
+          <button id="btn-pay" class="w-full bg-primary text-on-primary rounded-lg py-space-md font-label-lg text-label-lg">Pay ₹${r.unit_price.toLocaleString('en-IN')}</button>
+          <button id="btn-cancel" class="w-full bg-surface-container text-on-surface-variant rounded-lg py-2 font-label-sm text-label-sm">Cancel reservation</button>
+        </div>
+      </div>
+    `;
+    document.getElementById('btn-pay').addEventListener('click', pay);
+    document.getElementById('btn-cancel').addEventListener('click', cancelReservation);
+  } else if (r.status === 'FULFILLED') {
+    const o = r.order;
+    document.getElementById('main').innerHTML = `
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col items-center gap-space-sm text-center">
+        <span class="material-symbols-outlined text-[48px] text-tertiary-fixed-dim">check_circle</span>
+        <h2 class="font-headline-md text-headline-md text-on-surface">Order confirmed!</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">${r.product_name}</p>
+        <div class="w-full bg-surface-container-low rounded-lg p-space-md text-left mt-space-sm flex flex-col gap-1">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Order ID</span>
+          <span class="font-label-lg text-label-lg text-on-surface font-mono">#${o ? o.id : r.order_id}</span>
+          ${o ? `
+            <span class="font-label-sm text-label-sm text-on-surface-variant mt-2">Shipping from</span>
+            <span class="font-label-lg text-label-lg text-on-surface">${o.warehouse}</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant mt-2">Why this warehouse</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">${o.allocation_reason}</span>
+          ` : ''}
+        </div>
+        <a href="/" class="w-full bg-primary text-on-primary rounded-lg py-space-md font-label-lg text-label-lg mt-space-md inline-block">Continue shopping</a>
+      </div>
+    `;
+  } else {
+    const messages = {
+      PAYMENT_FAILED: 'Your payment did not go through.',
+      EXPIRED: 'Your reservation window expired before payment completed.',
+      CANCELLED: 'You cancelled this reservation.',
+    };
+    document.getElementById('main').innerHTML = `
+      <div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col items-center gap-space-sm text-center">
+        <span class="material-symbols-outlined text-[48px] text-error">cancel</span>
+        <h2 class="font-headline-md text-headline-md text-on-surface">${r.status.replace('_',' ')}</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant">${messages[r.status] || ''} Stock has been released back for other shoppers.</p>
+        <a href="/product.html?id=${r.product_id}" class="w-full bg-primary text-on-primary rounded-lg py-space-md font-label-lg text-label-lg mt-space-md inline-block">Try again</a>
+      </div>
+    `;
+    clearInterval(pollTimer);
+  }
+}
+
+async function pay() {
+  document.getElementById('btn-pay').disabled = true;
+  document.getElementById('btn-pay').textContent = 'Processing payment…';
+  // Demo payment gateway: succeeds the large majority of the time, occasionally
+  // declines — same as a real card processor would report back.
+  const outcome = Math.random() < 0.85 ? 'success' : 'fail';
+  await new Promise(r => setTimeout(r, 900));
+  await fetch('/flash-sale/' + reservationId + '/pay', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ outcome })
+  });
+  poll();
+}
+async function cancelReservation() {
+  await fetch('/flash-sale/' + reservationId + '/cancel', { method: 'POST' });
+  poll();
+}
+
+async function poll() {
+  if (queueEntryId && !reservationId) {
+    const res = await fetch('/flash-sale/queue-entry/' + queueEntryId);
+    const entry = await res.json();
+    if (entry.status === 'RESERVED' && entry.reservation_id) {
+      reservationId = entry.reservation_id;
+    } else if (entry.status === 'WAITING') {
+      renderQueued(entry);
+      return;
+    } else {
+      document.getElementById('main').innerHTML = '<div class="text-center py-space-lg">This queue entry is no longer active.</div>';
+      clearInterval(pollTimer);
+      return;
+    }
+  }
+  if (reservationId) {
+    const res = await fetch('/flash-sale/reservation/' + reservationId);
+    const r = await res.json();
+    renderReservation(r);
+  }
+}
+
+poll();
+pollTimer = setInterval(poll, 1000);
+</script>
+</body>
+</html>

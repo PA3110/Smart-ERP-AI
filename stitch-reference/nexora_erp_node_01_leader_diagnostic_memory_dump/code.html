@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#bac7e1", "on-surface": "#0b1c30", "primary-fixed-dim": "#bac7e1", "on-tertiary-container": "#009668", "on-error-container": "#93000a", "on-secondary-fixed": "#001d31", "surface-bright": "#f8f9ff", "primary-container": "#0e1c2f", "tertiary-container": "#002113", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-low": "#eff4ff", "surface-tint": "#525f75", "primary-fixed": "#d6e3fe", "on-secondary-container": "#00476e", "error-container": "#ffdad6", "outline": "#75777d", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#d3e4fe", "on-secondary-fixed-variant": "#004b73", "on-background": "#0b1c30", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#002113", "on-tertiary-fixed-variant": "#005236", "on-primary-fixed-variant": "#3a475c", "secondary-container": "#5bb8fe", "surface-container": "#e5eeff", "on-primary-fixed": "#0e1c2f", "outline-variant": "#c5c6cd", "secondary-fixed": "#cce5ff", "on-error": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#93ccff", "surface-dim": "#cbdbf5", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#77849c", "on-surface-variant": "#44474c", "inverse-surface": "#213145", "surface-container-high": "#dce9ff", "primary": "#000000", "surface": "#f8f9ff", "secondary": "#006398", "tertiary": "#000000" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-mobile": "0.5rem", "space-lg": "1rem", "margin": "1.5rem", "space-md": "0.75rem", "margin-mobile": "0.75rem" }, fontFamily: { "label-lg": ["Hanken Grotesk"], "body-sm": ["Hanken Grotesk"], "headline-lg": ["Hanken Grotesk"], "headline-xl": ["Hanken Grotesk"], "headline-md": ["Hanken Grotesk"], "headline-lg-mobile": ["Hanken Grotesk"], "headline-xl-mobile": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,28,48,0.04)]"><div class="h-28 px-gutter-mobile flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexora ERP Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdi9sYIbmnIPHNZU1qLrT7c8z7mCLSuqypIK7xFz2u5R9Kq8R8daPbsYQdb766fQu_MvG5RZfDsgGrSvUOw_5rdyJeDFfTte5hgWcYZhQP4UgHAmgj4rAGov4h4zcBZgiBfzpxjYVrfmAMwYpkyzA_Xmw8sCymlFMjZwtGYqkH2UVSBqc64zJWSYZw6S-i5fyAGHc2mjxvRVgZ2WuQPRfszjaSs7J9O8PftlhTfo0xynz6eGO5__H1"/><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface tracking-tight truncate leading-none">Nexora ERP</span><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-pulse shrink-0"></span><span class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider">Online • Sync Active</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between gap-space-sm pt-0.5 pb-0.5"><div class="min-w-0 flex items-center gap-1.5"><span class="font-headline-md text-headline-md text-on-surface truncate">Dashboard</span></div><button class="h-7 px-space-sm bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest transition-colors rounded flex items-center gap-1 shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[140px]">Inventory Manager</span><span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-24 bg-surface px-margin-mobile"><div class="flex flex-col w-full gap-space-md">
+<!-- Node Context & Status Header Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<!-- Breadcrumb & Term Tag -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 flex-wrap min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Admin</span>
+<span class="text-outline-variant font-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Raft Cluster V4</span>
+<span class="text-outline-variant font-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Nodes</span>
+<span class="text-outline-variant font-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Node-01 (Leader)</span>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+        CLUSTER V4.12
+      </span>
+</div>
+<!-- Main Node Identity & Primary Telemetry Strip -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px] text-tertiary-fixed">dns</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight truncate">Node-01 Core Leader</h1>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+              Leader (Term 842)
+            </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-label-sm text-label-sm truncate">
+<span>UPTIME: 142d 18h 22m</span>
+<span>•</span>
+<span class="text-on-tertiary-container font-semibold">HEARTBEAT: 12ms</span>
+</div>
+</div>
+</div>
+<!-- Quorum Badge -->
+<div class="bg-surface-container px-space-sm py-1.5 rounded-lg flex items-center gap-2 self-start sm:self-auto shrink-0">
+<span class="material-symbols-outlined text-secondary text-[18px]">group_work</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">CONSENSUS</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">3/3 QUORUM SYNCHRONIZED</span>
+</div>
+</div>
+</div>
+<!-- Live Incident Sync Alert Banner -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded bg-secondary text-on-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">sync_saved_locally</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between flex-wrap gap-1">
+<span class="font-label-lg text-label-lg text-on-surface">Atomic Commit ORD-1001 Synchronized</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">ZERO DRIFT • VERIFIED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Incident <span class="font-label-sm text-label-sm text-secondary font-semibold">INC-BLR-4820</span> reconciliation applied to WAL block #18,922,014 for SKU <span class="font-label-sm text-label-sm bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface">IP17-256-BLK</span> across all followers in 1.48ms.
+        </p>
+</div>
+</div>
+</div>
+<!-- HUD Telemetry Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Stat 1: Heap Allocation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between gap-space-xs relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Heap Allocation</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">memory</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">18.42 <span class="text-body-sm text-on-surface-variant font-normal">/ 32.00 GB</span></span>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>57.5% Utilized</span>
+<span class="text-on-tertiary-container font-semibold">Healthy Range</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full" style="width: 57.5%;"></div>
+</div>
+</div>
+<!-- Stat 2: GC Latency -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">GC Pause Latency</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">timer</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">0.18ms</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">P99</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>P99.9: 0.42ms</span>
+<span class="bg-surface-container px-1 py-0.2 rounded text-on-surface">ZGC Gen</span>
+</div>
+</div>
+<div class="w-full flex gap-1 items-center mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Sub-millisecond SLA active</span>
+</div>
+</div>
+<!-- Stat 3: Goroutines / Workers -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Async Workers</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">schema</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">4,218 <span class="text-body-sm text-on-surface-variant font-normal">Active</span></span>
+<div class="flex items-center justify-between font-label-sm text-label-sm mt-0.5">
+<span class="text-on-tertiary-container font-semibold">0 Deadlocked</span>
+<span class="text-on-surface-variant">100% In-flight</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden mt-1">
+<div class="bg-tertiary-fixed-dim h-full rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Stat 4: WAL IOPS & Storage -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Write-Ahead Log</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">48,290 <span class="text-body-sm text-on-surface-variant font-normal">IOPS</span></span>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span>NVMe Fsync</span>
+<span class="text-on-tertiary-container font-semibold">0.12ms avg</span>
+</div>
+</div>
+<div class="w-full flex gap-1 items-center mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Zero journal backpressure</span>
+</div>
+</div>
+</div>
+<!-- Raft Consensus Matrix & Cluster State Section -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Raft Consensus State Machine</h2>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded">
+          Lease TTL: 1,880ms
+        </span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded">
+          Renewing: 120ms
+        </span>
+</div>
+</div>
+<!-- Synchrony Core Indicators -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Term</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold text-secondary">#842</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Commit Index</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">#18,922,014</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Last Applied</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">#18,922,014</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Election Window</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold text-on-tertiary-container">150 - 300ms</span>
+</div>
+</div>
+<!-- Peer Replications List -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Synchronized Follower Peers (2/2 Active)</span>
+<!-- Peer 1: Node-02 -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center font-label-md text-label-md text-on-surface font-bold">
+            02
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface">Node-02 (Secondary Follower)</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MatchIndex: #18,922,014 • NextIndex: #18,922,015</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end sm:self-auto">
+<div class="text-right">
+<span class="font-label-md text-label-md text-on-surface font-semibold">0.81ms</span>
+<div class="font-label-sm text-label-sm text-on-tertiary-container">RTT Latency</div>
+</div>
+<div class="h-6 w-16 bg-surface-container-highest rounded flex items-center px-1">
+<div class="h-2 w-full bg-secondary rounded"></div>
+</div>
+</div>
+</div>
+<!-- Peer 2: Node-04 -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center font-label-md text-label-md text-on-surface font-bold">
+            04
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface">Node-04 (Ops Quorum Follower)</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.2 rounded font-semibold">SYNCED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MatchIndex: #18,922,014 • NextIndex: #18,922,015</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end sm:self-auto">
+<div class="text-right">
+<span class="font-label-md text-label-md text-on-surface font-semibold">0.69ms</span>
+<div class="font-label-sm text-label-sm text-on-tertiary-container">RTT Latency</div>
+</div>
+<div class="h-6 w-16 bg-surface-container-highest rounded flex items-center px-1">
+<div class="h-2 w-full bg-secondary rounded"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Memory Hex Dump & Ring Buffer Inspector -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">find_replace</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">In-Flight Ring Buffer &amp; Snapshot Dump</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded text-on-surface font-mono">
+        ADDR: 0x7FFF_5A20_B000 - 0x7FFF_5A20_B3FF
+      </span>
+</div>
+<!-- Payload Details & Merkle Verification -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Target Transaction Payload:</span>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded font-bold">ORD-1001</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+          SHA-256 Checksum: Verified
+        </span>
+</div>
+<div class="flex flex-col gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="truncate">
+<span class="text-on-surface font-semibold">SKU:</span> IP17-256-BLK (iPhone 17 Black 256GB) • <span class="text-on-surface font-semibold">Incident Ref:</span> INC-BLR-4820
+        </div>
+<div class="truncate font-mono text-on-surface-variant">
+<span class="text-on-surface font-semibold">Merkle Root:</span> 0x4f9a77c3e1208fb944aa0d8832a83d2c69b240e531ff89d0092acba12f88b0e7
+        </div>
+</div>
+</div>
+<!-- Monospace Byte Stream Viewer -->
+<div class="bg-primary-container text-on-primary rounded-lg p-space-sm font-label-sm text-label-sm overflow-x-auto shadow-inner">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-tint/30 text-on-primary-container font-mono">
+<span>HEX OFFSET DISASSEMBLY</span>
+<span>ASCII DECODE (LITTLE-ENDIAN)</span>
+</div>
+<div class="font-mono space-y-1 pt-space-xs leading-relaxed select-all">
+<div class="flex items-center justify-between gap-4">
+<span class="text-tertiary-fixed-dim">0000: 4e 45 58 4f 52 41 5f 52  41 46 54 5f 56 34 00 01</span>
+<span class="text-on-primary-container shrink-0">| NEXORA_RAFT_V4..</span>
+</div>
+<div class="flex items-center justify-between gap-4">
+<span class="text-tertiary-fixed-dim">0010: 49 4e 43 2d 42 4c 52 2d  34 38 32 30 5f 41 55 54</span>
+<span class="text-on-primary-container shrink-0">| INC-BLR-4820_AUT</span>
+</div>
+<div class="flex items-center justify-between gap-4 bg-surface-tint/20 py-0.5 rounded px-1 -mx-1">
+<span class="text-secondary-fixed font-bold">0020: 4f 52 44 2d 31 30 30 31  5f 49 50 31 37 2d 32 35</span>
+<span class="text-on-primary shrink-0 font-bold">| ORD-1001_IP17-25</span>
+</div>
+<div class="flex items-center justify-between gap-4 bg-surface-tint/20 py-0.5 rounded px-1 -mx-1">
+<span class="text-secondary-fixed font-bold">0030: 36 2d 42 4c 4b 5f 41 54  4f 4d 49 43 5f 43 4f 4d</span>
+<span class="text-on-primary shrink-0 font-bold">| 6-BLK_ATOMIC_COM</span>
+</div>
+<div class="flex items-center justify-between gap-4">
+<span class="text-tertiary-fixed-dim">0040: 65 38 32 66 39 30 31 61  61 31 30 39 00 00 ff 00</span>
+<span class="text-on-primary-container shrink-0">| e82f901aa109....</span>
+</div>
+<div class="flex items-center justify-between gap-4">
+<span class="text-tertiary-fixed-dim">0050: 00 00 03 4a 12 90 e4 22  00 00 00 00 00 00 00 00</span>
+<span class="text-on-primary-container shrink-0">| ...J..."........</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Thread Allocation & Profiler Diagnostics -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Allocation Breakdown Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">pie_chart</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Memory Partitioning</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">18.42 GB Live</span>
+</div>
+<!-- Segmented Bar -->
+<div class="w-full h-3 bg-surface-container rounded-full flex overflow-hidden">
+<div class="bg-secondary h-full" style="width: 42%;" title="Raft Log Buffer 42%"></div>
+<div class="bg-primary-container h-full" style="width: 34%;" title="LSM Tree / MemTable 34%"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 16%;" title="Merkle Proof Cache 16%"></div>
+<div class="bg-secondary-fixed h-full" style="width: 8%;" title="Network Ring Buffer 8%"></div>
+</div>
+<!-- Partition Legend -->
+<div class="grid grid-cols-2 gap-space-xs font-label-sm text-label-sm pt-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded bg-secondary shrink-0"></span>
+<div class="flex flex-col min-w-0 truncate">
+<span class="text-on-surface font-semibold">Raft Log Buffer</span>
+<span class="text-on-surface-variant font-mono">42% (7.74 GB)</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded bg-primary-container shrink-0"></span>
+<div class="flex flex-col min-w-0 truncate">
+<span class="text-on-surface font-semibold">LSM MemTable</span>
+<span class="text-on-surface-variant font-mono">34% (6.26 GB)</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded bg-tertiary-fixed-dim shrink-0"></span>
+<div class="flex flex-col min-w-0 truncate">
+<span class="text-on-surface font-semibold">Merkle Proofs</span>
+<span class="text-on-surface-variant font-mono">16% (2.95 GB)</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded bg-secondary-fixed shrink-0"></span>
+<div class="flex flex-col min-w-0 truncate">
+<span class="text-on-surface font-semibold">Network I/O Ring</span>
+<span class="text-on-surface-variant font-mono">8% (1.47 GB)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Concurrency & Mutex Contention -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">lock_reset</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Thread Contention</h2>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded font-semibold">OPTIMAL</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lock Wait Time</span>
+<span class="font-headline-md text-headline-md text-on-surface">0.00%</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sync Mutexes</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">1,024 Spinlocks</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Leader lock-free ring channel utilizes CAS atomic pointer swaps. Zero thread starvation detected across 64 vCPUs.
+      </p>
+<button class="h-9 px-space-sm bg-surface-container hover:bg-surface-container-high transition-colors rounded-lg flex items-center justify-center gap-1.5 text-on-surface font-label-lg text-label-lg" id="btn-self-test">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Run Memory Core Consistency Self-Test</span>
+</button>
+</div>
+</div>
+<!-- Operational Actions & Diagnostics Panel -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-1">
+<span class="font-label-lg text-label-lg text-on-surface">Diagnostic Commands &amp; Forensic Controls</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">OPERATOR PRIVILEGE: ROOT / AUTH-2FA</span>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-xs">
+<!-- Action 1: Safe Heap Dump -->
+<button class="h-11 px-space-md bg-primary hover:bg-surface-tint active:bg-primary-container text-on-primary rounded-lg flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors shadow-sm" id="btn-heap-dump">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Trigger Safe Snapshot &amp; Dump (.hprof)</span>
+</button>
+<!-- Action 2: Step-down leader -->
+<button class="h-11 px-space-md bg-secondary hover:bg-on-secondary-container active:bg-secondary text-on-secondary rounded-lg flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors" id="btn-step-down">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+<span>Step-Down Leader &amp; Transfer Term</span>
+</button>
+<!-- Action 3: Export WAL -->
+<button class="h-11 px-space-md bg-surface-container hover:bg-surface-container-high active:bg-surface-container-highest text-on-surface rounded-lg flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors" id="btn-export-wal">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>Export Cryptographic WAL Log</span>
+</button>
+</div>
+<!-- Interactive Feedback Toast Placeholder -->
+<div class="hidden bg-tertiary-fixed text-on-tertiary-fixed p-space-sm rounded-lg flex items-center gap-space-sm" id="action-status-banner">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+<span class="font-label-md text-label-md font-semibold" id="action-status-text">Command dispatched successfully.</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const banner = document.getElementById('action-status-banner');
+    const bannerText = document.getElementById('action-status-text');
+
+    function showStatus(msg) {
+      if (!banner || !bannerText) return;
+      bannerText.textContent = msg;
+      banner.classList.remove('hidden');
+      setTimeout(() => {
+        banner.classList.add('hidden');
+      }, 4000);
+    }
+
+    const btnHeap = document.getElementById('btn-heap-dump');
+    if (btnHeap) {
+      btnHeap.addEventListener('click', () => {
+        showStatus('Generating atomic .hprof memory dump (snapshot ID: DUMP-842-NODE01). File buffering to secure vault...');
+      });
+    }
+
+    const btnStepDown = document.getElementById('btn-step-down');
+    if (btnStepDown) {
+      btnStepDown.addEventListener('click', () => {
+        if (confirm('Are you sure you want to gracefully step down Node-01 and trigger an election for Term 843?')) {
+          showStatus('Step-down initiated. Raft Term 843 election handoff broadcasting to Node-02 & Node-04...');
+        }
+      });
+    }
+
+    const btnExportWal = document.getElementById('btn-export-wal');
+    if (btnExportWal) {
+      btnExportWal.addEventListener('click', () => {
+        showStatus('Cryptographic WAL stream compiled. Signed SHA-256 archive generated for download.');
+      });
+    }
+
+    const btnSelfTest = document.getElementById('btn-self-test');
+    if (btnSelfTest) {
+      btnSelfTest.addEventListener('click', () => {
+        showStatus('Self-Test completed in 3.4ms. 100% memory page checksum integrity verified.');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(11,28,48,0.05)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-secondary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="demand-ai" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm tracking-tight">Demand AI</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventory" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventory</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="reservations" href="#"><span class="material-symbols-outlined text-[22px]">lock_clock</span><span class="font-label-sm text-label-sm tracking-tight">Reservations</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="procure" href="#"><span class="material-symbols-outlined text-[22px]">local_shipping</span><span class="font-label-sm text-label-sm tracking-tight">Procure</span></a></div></nav></body></html>
